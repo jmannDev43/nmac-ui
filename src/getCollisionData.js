@@ -20,5 +20,4 @@ async function getCollisionData(eventByType, restParam, updateMapData) {
   updateMapData(aggregatedSeriesData);
 }
 
-
 export default getCollisionData;

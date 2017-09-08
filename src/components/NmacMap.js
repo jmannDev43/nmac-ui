@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import getCollisionData from '../getCollisionData';
-import CircularProgress from 'material-ui/CircularProgress';
+
 import mapData from '../third-party/us-all'
 // see if I get npm version working, come back to...
 const Highcharts = require('../third-party/highmaps');
@@ -8,24 +7,22 @@ Highcharts.maps['countries/us/us-all'] = mapData;
 
 class NmacMap extends Component {
   componentDidMount() {
-    const eventByType = 'year';
-    const restParam = 2016;
-    getCollisionData(eventByType, restParam, this.props.updateMapData);
-  }
-  componentDidUpdate() {
+    console.log(`Mount Map`);
     renderMap(this.props.mapData);
   }
+  componentDidUpdate(prevProps, prevState) {
+    console.log(`Update Map`);
+    if (prevProps.mapData && this.props.mapData &&
+      prevProps.mapData[0].year !== this.props.mapData[0].year) {
+      renderMap(this.props.mapData);
+    }
+  }
   render() {
-    if (this.props.mapData) {
       return (
         <div id="nmacMap">
 
         </div>
       )
-    }
-    return <div style={{height: (window.innerHeight - 30), textAlign: 'center'}}>
-      <CircularProgress size={300} thickness={7} style={{marginTop: '18em'}}/>
-    </div>
   }
 }
 
@@ -34,8 +31,7 @@ function renderMap(collisionMapData) {
     chart: {
       borderWidth: 0,
       backgroundColor: '',
-      map: 'countries/us/us-all',
-      height: '700px'
+      map: 'countries/us/us-all'
     },
     title: {
       text: ''
@@ -57,7 +53,7 @@ function renderMap(collisionMapData) {
       },
       {
         type: 'mapbubble',
-        name: 'NMACs by State',
+        name: 'NMACs by Location',
         dataLabels: {
           enabled: true,
           format: '{point.z}'

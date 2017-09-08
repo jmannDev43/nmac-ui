@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html, body {
+  /*background-image: url('../../public/stardust.png');*/
+  background-color: #5e6063 !important;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  font-family: 'Roboto Slab', sans-serif !important;
+}
+
+#nmacMap {
+  margin-top: 2em;
+}

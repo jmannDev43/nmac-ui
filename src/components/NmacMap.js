@@ -34,12 +34,12 @@ function renderMap(collisionMapData) {
       backgroundColor: '',
       map: 'countries/us/us-all',
       // height: '600px',
-      events: {
-        drilldown: drillDownMap,
-        drillup: function () {
-          this.setTitle(null, { text: 'USA' });
-        }
-      }
+      // events: {
+      //   drilldown: drillDownMap,
+      //   drillup: function () {
+      //     this.setTitle(null, { text: 'USA' });
+      //   }
+      // }
     },
     title: {
       text: ''
@@ -59,14 +59,13 @@ function renderMap(collisionMapData) {
       type: 'logarithmic'
     },
     plotOptions: {
-      // series: {
-      //   events: {
-      //     click: function (e) {
-      //       console.log('this', this);
-      //       drillDownMap(e, this.chart);
-      //     }
-      //   }
-      // },
+      series: {
+        events: {
+          click: function (e) {
+            drillDownMap(e, this.chart);
+          }
+        }
+      },
       map: {
         states: {
           hover: {

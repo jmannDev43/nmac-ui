@@ -30,6 +30,7 @@ class App extends Component {
   }
   componentDidMount() {
     const eventByType = 'year';
+    // intent is to update this so it's pulled from router
     const restParam = this.state.activeYear;
     getMethods.getEventCountsByYear(restParam, this.updateMapData.bind(this));
   }

@@ -1,3 +1,4 @@
+import properCase from 'proper-case';
 
 async function getCollisionData(addToUrl) {
   const collisionData = []
@@ -50,9 +51,9 @@ async function getEventCountsByYearAndState(year, state) {
   const seriesData = data.map(d => ({
     lat: d.latitude,
     lon: d.longitude,
-    localCity: d.localCity,
+    localCity: properCase(d.localCity),
     localState: d.localState,
-    value: d.eventCount,
+    z: d.eventCount,
     year: d.eventYear
   }));
   console.log('seriesData', seriesData);

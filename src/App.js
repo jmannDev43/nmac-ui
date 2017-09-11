@@ -6,7 +6,7 @@ import { orange50 as accent, red700 as primary, black } from 'material-ui/styles
 import AppBar from 'material-ui/AppBar';
 import YearStepper from './components/YearStepper';
 import CircularProgress from 'material-ui/CircularProgress';
-import getCollisionData from './getCollisionData';
+import getMethods from './getCollisionData';
 
 const muiTheme = getMuiTheme({
   fontFamily: 'Roboto Slab, sans-serif',
@@ -31,14 +31,14 @@ class App extends Component {
   componentDidMount() {
     const eventByType = 'year';
     const restParam = this.state.activeYear;
-    getCollisionData(eventByType, restParam, this.updateMapData.bind(this));
+    getMethods.getEventCountsByYear(restParam, this.updateMapData.bind(this));
   }
   updateMapData(mapData) {
     this.setState({ mapData });
   }
   updateActiveYear(activeYear) {
     this.setState({ activeYear });
-    getCollisionData('year', activeYear, this.updateMapData.bind(this));
+    getMethods.getEventCountsByYear(activeYear, this.updateMapData.bind(this));
   }
   render() {
     return (

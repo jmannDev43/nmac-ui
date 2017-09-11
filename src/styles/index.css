@@ -10,3 +10,11 @@ html, body {
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   font-family: 'Roboto Slab', sans-serif !important;
 }
+
+.highcharts-loading {
+  background-color: transparent !important;
+}
+
+.highcharts-loading-inner {
+  color: red !important;
+}

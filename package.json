@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@segment/load-script": "^1.0.1",
+    "highcharts": "^5.0.14",
     "material-ui": "^0.19.1",
     "popsicle": "^9.1.0",
     "proj4": "^2.4.4",
+    "proper-case": "^1.0.5",
     "rc-slider": "^8.3.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

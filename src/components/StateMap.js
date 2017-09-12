@@ -40,15 +40,24 @@ class StateMap extends Component {
     // }, 3000);
     // chart.showLoading('<i class="icon-spinner icon-spin icon-3x"></i>'); // Font Awesome spinner
 
-    const srcUrl = `https://code.highcharts.com/mapdata/${mapKey}.js`
-    window.Highcharts = Highcharts;
-    load(srcUrl, () => {
+    if (!window.Highcharts) {
+      window.Highcharts = Highcharts;
+    }
+
+    if (Highcharts.maps[mapKey]) {
       let stateGeoData = Highcharts.geojson(Highcharts.maps[mapKey])
       stateGeoData = stateGeoData.filter(m => !m['hc-key']);
-      // chart.hideLoading();
-      // clearTimeout(fail);
       renderMap(collisionData, stateGeoData, mapKey, this.props);
-    });
+    } else {
+      const srcUrl = `https://code.highcharts.com/mapdata/${mapKey}.js`
+      load(srcUrl, () => {
+        let stateGeoData = Highcharts.geojson(Highcharts.maps[mapKey])
+        stateGeoData = stateGeoData.filter(m => !m['hc-key']);
+        // chart.hideLoading();
+        // clearTimeout(fail);
+        renderMap(collisionData, stateGeoData, mapKey, this.props);
+      });
+    }
   }
   componentDidUpdate(prevProps, prevState) {
     console.log(`Update Map`);
@@ -83,9 +92,13 @@ function renderMap(collisionData, stateGeoData, mapKey, props) {
       backgroundColor: '',
       map: mapKey,
     },
+    lang: {
+      returnToUS: 'Return to US'
+    },
     exporting: {
       buttons: [{
         text: 'Return to US',
+        _titleKey: 'returnToUS',
         onclick: function () {
           const activeYear = props.match.params.year;
           props.history.push(`/events/US/${activeYear}`)
@@ -96,11 +109,11 @@ function renderMap(collisionData, stateGeoData, mapKey, props) {
           r: 0,
           states: {
             hover: {
-              fill: '#a4edba'
+              fill: '#28ceff'
             },
             select: {
               stroke: '#039',
-              fill: '#a4edba'
+              fill: '#28ceff'
             }
           }
         }

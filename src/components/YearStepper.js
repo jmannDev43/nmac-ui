@@ -17,7 +17,10 @@ class YearStepper extends Component {
     }
   }
   updateStep(year) {
-    const url = this.props.match.path.replace(':year', year);
+    let url = this.props.match.path.replace(':year', year);
+    if (url.indexOf(':state') > -1) {
+      url = url.replace(':state', this.props.match.params.state);
+    }
     this.props.history.push(url);
   }
   playTimeline() {
@@ -30,7 +33,6 @@ class YearStepper extends Component {
         this.stopTimeline();
       }
       yearIndex++;
-      console.log('year', year);
       this.updateStep(year);
     }, 1000);
   }
@@ -69,7 +71,7 @@ class YearStepper extends Component {
           </Stepper>
         </div>
         {this.state.isPlaying ?
-          <div>
+          <div className="col col-sm-1">
             <FloatingActionButton style={{margin: '1em'}} secondary={false} mini={true}
                                   onClick={this.stopTimeline.bind(this)}>
               <Stop/>
@@ -77,13 +79,14 @@ class YearStepper extends Component {
             <CircularProgress size={30} />
           </div>
             :
-          <div>
+          <div className="col col-sm-1">
             <FloatingActionButton style={{margin: '1em', boxShadow: 'rgba(90, 211, 47, 0.16) 0px 3px 10px, rgba(90, 211, 47, 0.23) 0px 3px 10px'}} backgroundColor="#00E676" mini={true}
                                   onClick={this.playTimeline.bind(this)}>
               <PlayArrow/>
             </FloatingActionButton>
           </div>
         }
+        <h2 className="stepperYear">{this.props.activeYear}</h2>
       </div>
     )
   }

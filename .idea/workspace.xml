@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74b0caa4-5282-45a8-a5b2-14ac0adb1f64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Routes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/StateMap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/components/App.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/NmacMap.js" afterPath="$PROJECT_DIR$/src/components/NationalMap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.test.js" afterPath="$PROJECT_DIR$/src/App.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/StateMap.js" afterPath="$PROJECT_DIR$/src/components/StateMap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/YearStepper.js" afterPath="$PROJECT_DIR$/src/components/YearStepper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drillDownMap.js" afterPath="$PROJECT_DIR$/src/drillDownMap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/getCollisionData.js" afterPath="$PROJECT_DIR$/src/getCollisionData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/index.css" afterPath="$PROJECT_DIR$/src/styles/index.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,7 +23,7 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.60042286">
       <split-first>
         <leaf>
           <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
@@ -47,17 +38,18 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="StateMap.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="StateMap.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/StateMap.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="322">
-                  <caret line="46" column="33" lean-forward="false" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+                <state relative-caret-position="350">
+                  <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
-                    <marker date="1505229532000" expanded="true" signature="2207:2216" ph="..." />
-                    <marker date="1505229532000" expanded="true" signature="2324:2336" ph="..." />
-                    <marker date="1505229532000" expanded="true" signature="2390:2540" ph="..." />
-                    <marker date="1505229532000" expanded="true" signature="2446:2527" ph="..." />
+                    <element signature="e#1119#1157#0" expanded="false" />
+                    <marker date="1505231670000" expanded="true" signature="2512:2521" ph="..." />
+                    <marker date="1505231670000" expanded="true" signature="2629:2641" ph="..." />
+                    <marker date="1505231670000" expanded="true" signature="2695:2845" ph="..." />
+                    <marker date="1505231670000" expanded="true" signature="2751:2832" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -98,20 +90,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="YearStepper.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="YearStepper.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/YearStepper.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="23" />
+                <state relative-caret-position="345">
+                  <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
-                    <marker date="1505191923000" expanded="true" signature="1514:1925" ph="..." />
-                    <marker date="1505191923000" expanded="true" signature="1537:1553" ph="..." />
-                    <marker date="1505191923000" expanded="true" signature="1828:1925" ph="..." />
-                    <marker date="1505191923000" expanded="true" signature="2517:2797" ph="..." />
-                    <marker date="1505191923000" expanded="false" signature="2559:2568" ph="..." />
-                    <marker date="1505191923000" expanded="true" signature="2827:3166" ph="..." />
-                    <marker date="1505191923000" expanded="false" signature="2869:2878" ph="..." />
+                    <marker date="1505231989000" expanded="true" signature="1589:2000" ph="..." />
+                    <marker date="1505231989000" expanded="true" signature="1612:1628" ph="..." />
+                    <marker date="1505231989000" expanded="true" signature="1903:2000" ph="..." />
+                    <marker date="1505231989000" expanded="true" signature="2617:2897" ph="..." />
+                    <marker date="1505231989000" expanded="false" signature="2659:2668" ph="..." />
+                    <marker date="1505231989000" expanded="true" signature="2952:3291" ph="..." />
+                    <marker date="1505231989000" expanded="false" signature="2994:3003" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -120,8 +112,8 @@
           <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/styles/index.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+                <state relative-caret-position="584">
+                  <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
                   <folding />
                 </state>
               </provider>
@@ -160,7 +152,7 @@
                   <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
-                    <marker date="1505229532000" expanded="true" signature="3820:3880" ph="//..." />
+                    <marker date="1505231670000" expanded="true" signature="4210:4270" ph="//..." />
                   </folding>
                 </state>
               </provider>
@@ -169,8 +161,8 @@
           <file leaf-file-name="NationalMap.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/NationalMap.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+                <state relative-caret-position="398">
+                  <caret line="110" column="19" lean-forward="true" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -221,17 +213,17 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/YearStepper2.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/styles/index.css" />
         <option value="$PROJECT_DIR$/src/components/NmacMap.js" />
         <option value="$PROJECT_DIR$/src/Routes.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/App.js" />
-        <option value="$PROJECT_DIR$/src/components/YearStepper.js" />
         <option value="$PROJECT_DIR$/src/drillDownMap.js" />
         <option value="$PROJECT_DIR$/src/getCollisionData.js" />
         <option value="$PROJECT_DIR$/src/components/NationalMap.js" />
+        <option value="$PROJECT_DIR$/src/styles/index.css" />
         <option value="$PROJECT_DIR$/src/components/StateMap.js" />
+        <option value="$PROJECT_DIR$/src/components/YearStepper.js" />
       </list>
     </option>
   </component>
@@ -393,12 +385,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1504749633682</updated>
-      <workItem from="1504749635478" duration="78583000" />
+      <workItem from="1504749635478" duration="80096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78583000" />
+    <option name="totallyTimeSpent" value="80096000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -564,14 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -598,33 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/YearStepper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <marker date="1505191923000" expanded="true" signature="1514:1925" ph="..." />
-            <marker date="1505191923000" expanded="true" signature="1537:1553" ph="..." />
-            <marker date="1505191923000" expanded="true" signature="1828:1925" ph="..." />
-            <marker date="1505191923000" expanded="true" signature="2517:2797" ph="..." />
-            <marker date="1505191923000" expanded="false" signature="2559:2568" ph="..." />
-            <marker date="1505191923000" expanded="true" signature="2827:3166" ph="..." />
-            <marker date="1505191923000" expanded="false" signature="2869:2878" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NationalMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/drillDownMap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -636,16 +593,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/StateMap.js">
+    <entry file="file://$PROJECT_DIR$/src/styles/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="46" column="33" lean-forward="false" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        <state relative-caret-position="584">
+          <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NationalMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="110" column="19" lean-forward="true" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <marker date="1505229532000" expanded="true" signature="2207:2216" ph="..." />
-            <marker date="1505229532000" expanded="true" signature="2324:2336" ph="..." />
-            <marker date="1505229532000" expanded="true" signature="2390:2540" ph="..." />
-            <marker date="1505229532000" expanded="true" signature="2446:2527" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/StateMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#1119#1157#0" expanded="false" />
+            <marker date="1505231670000" expanded="true" signature="2512:2521" ph="..." />
+            <marker date="1505231670000" expanded="true" signature="2629:2641" ph="..." />
+            <marker date="1505231670000" expanded="true" signature="2695:2845" ph="..." />
+            <marker date="1505231670000" expanded="true" signature="2751:2832" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/YearStepper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1505231989000" expanded="true" signature="1589:2000" ph="..." />
+            <marker date="1505231989000" expanded="true" signature="1612:1628" ph="..." />
+            <marker date="1505231989000" expanded="true" signature="1903:2000" ph="..." />
+            <marker date="1505231989000" expanded="true" signature="2617:2897" ph="..." />
+            <marker date="1505231989000" expanded="false" signature="2659:2668" ph="..." />
+            <marker date="1505231989000" expanded="true" signature="2952:3291" ph="..." />
+            <marker date="1505231989000" expanded="false" signature="2994:3003" ph="..." />
           </folding>
         </state>
       </provider>

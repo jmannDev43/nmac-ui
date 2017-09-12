@@ -18,3 +18,13 @@ html, body {
 .highcharts-loading-inner {
   color: red !important;
 }
+
+.stepperYear {
+  clear: both;
+  display: inline-block;
+  color: white;
+  line-height: 1.5em;
+  height: 30px;
+  vertical-align: top;
+  margin-left: 0.5em;
+}

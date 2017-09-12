@@ -63,26 +63,4 @@ async function drillDownMap(e, chart) {
   }
 }
 
-function addDrillUpButton(chart) {
-  const normalState = new Object();
-  normalState.stroke_width = null;
-  normalState.stroke = null;
-  normalState.fill = null;
-  normalState.padding = null;
-  normalState.r = null;
-  normalState.rx = null;
-
-  // let hoverState = new Object();
-  // hoverState = normalState;
-  // hoverState.fill = 'darkgrey';
-
-  let pressedState = new Object();
-  pressedState = normalState;
-
-  const custombutton = chart.renderer.button('Return to US Map', 800, 10, () => {
-    chart.map = 'countries/us/us-all';
-    chart.series[0] = originalSeries;
-  }, null, null, pressedState).add();
-}
-
 export default drillDownMap;

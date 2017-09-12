@@ -5,16 +5,15 @@ async function getCollisionData(addToUrl) {
   await fetch(`http://localhost:8080/${addToUrl}`)
     .then(blob => blob.json())
     .then(data => collisionData.push(...data));
-  console.log('collisionData', collisionData);
   return collisionData;
 }
 
-async function getEvent(eventId, updateMapData) {
+async function getEvent(eventId, updateCollisionData) {
   const data = await getCollisionData(`events/${eventId}`);
-  updateMapData(data);
+  updateCollisionData(data);
 }
 
-async function getEventsByYearAndState(year, state, updateMapData) {
+async function getEventsByYearAndState(year, state, updateCollisionData) {
   const data = await getCollisionData(`events/year/${year}/state${state}`);
   const seriesData = data.map(d => ({
     lat: d.latitude,
@@ -24,10 +23,10 @@ async function getEventsByYearAndState(year, state, updateMapData) {
     z: d.eventCount,
     year: d.eventYear
   }));
-  updateMapData(seriesData);
+  updateCollisionData(seriesData);
 }
 
-async function getEventCountsByYear(year, updateMapData) {
+async function getEventCountsByYear(year, updateCollisionData) {
   const data = await getCollisionData(`eventCounts/year/${year}`);
   const aggregatedData = data.reduce((acc, curr) => {
     if (!acc[curr.localState]) {
@@ -42,11 +41,10 @@ async function getEventCountsByYear(year, updateMapData) {
     return acc;
   }, {});
   const seriesData = Object.values(aggregatedData);
-  console.log('seriesData', seriesData);
-  updateMapData(seriesData);
+  updateCollisionData(seriesData);
 }
 
-async function getEventCountsByYearAndState(year, state) {
+async function getEventCountsByYearAndState(year, state, updateCollisionData) {
   const data = await getCollisionData(`eventCounts/year/${year}/state/${state}`);
   const seriesData = data.map(d => ({
     lat: d.latitude,
@@ -56,8 +54,7 @@ async function getEventCountsByYearAndState(year, state) {
     z: d.eventCount,
     year: d.eventYear
   }));
-  console.log('seriesData', seriesData);
-  return seriesData;
+  updateCollisionData(seriesData);
 }
 
 export default {

@@ -4,6 +4,7 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import PlayArrow from 'material-ui/svg-icons/av/play-arrow';
 import Stop from 'material-ui/svg-icons/av/stop';
 import CircularProgress from 'material-ui/CircularProgress';
+import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 
 const collisionYears = [1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017];
 let intervalId;
@@ -15,9 +16,9 @@ class YearStepper extends Component {
       isPlaying: false,
     }
   }
-  updateStep(year, i) {
-    // this.props.updateMapData(null);
-    this.props.updateActiveYear(year);
+  updateStep(year) {
+    const url = this.props.match.path.replace(':year', year);
+    this.props.history.push(url);
   }
   playTimeline() {
     console.log('Starting Player');
@@ -30,7 +31,7 @@ class YearStepper extends Component {
       }
       yearIndex++;
       console.log('year', year);
-      this.props.updateActiveYear(year);
+      this.updateStep(year);
     }, 1000);
   }
   stopTimeline() {
@@ -39,6 +40,7 @@ class YearStepper extends Component {
     this.setState({ isPlaying: false });
   }
   render() {
+    console.log('this.props', this.props);
     return (
       <div>
         <div style={{
@@ -48,11 +50,11 @@ class YearStepper extends Component {
           height: '102px',
           border: '1px solid grey'
         }}>
-          <Stepper linear={false} activeStep={collisionYears.indexOf(this.props.activeYear)} connector={null}>
+          <Stepper linear={false} activeStep={collisionYears.indexOf(parseInt(this.props.activeYear))} connector={null}>
             {
               collisionYears.map((year, i) => {
                 return <Step key={`step_${year}`}>
-                  <StepButton key={`stepButton_${year}`} onClick={() => this.updateStep(year, i)}>
+                  <StepButton key={`stepButton_${year}`} onClick={() => this.updateStep(year)}>
                     <StepLabel style={{
                       transform: 'rotate(90deg)',
                       paddingLeft: 0,
@@ -87,4 +89,4 @@ class YearStepper extends Component {
   }
 }
 
-export default YearStepper;
+export default withRouter(YearStepper);

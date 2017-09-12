@@ -1,29 +1,36 @@
 import React, { Component } from 'react';
-import { Route, withRouter } from 'react-router-dom';
-import mapData from '../third-party/us-all'
+import { withRouter } from 'react-router-dom';
 import getMethods from '../getCollisionData';
 import CircularProgress from 'material-ui/CircularProgress';
 import YearStepper from './YearStepper';
 import load from '@segment/load-script';
+import DetailModal from './DetailModal';
+import properCase from 'proper-case';
 const Highcharts = require('highcharts/highmaps')
 require('highcharts/modules/exporting')(Highcharts);
-// import load from '@segment/load-script';
-// import properCase from 'proper-case';
 
 class StateMap extends Component {
   constructor() {
     super();
     this.state = {
-      collisionData: null
+      collisionData: null,
+      isModalOpen: false,
+      selectedCity: null,
+      modalEventData: null,
     }
-  }
-  getMapData() {
-    const activeYear = parseInt(this.props.match.params.year);
-    const state = this.props.match.params.state;
-    getMethods.getEventCountsByYearAndState(activeYear, state, this.updateCollisionData.bind(this));
   }
   componentDidMount() {
     this.getMapData();
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.location !== this.props.location) {
+      this.getMapData();
+    }
+  }
+  getMapData() {
+    const activeYear = parseInt(this.props.match.params.year, 10);
+    const state = this.props.match.params.state;
+    getMethods.getEventCountsByYearAndState(activeYear, state, this.updateCollisionData.bind(this));
   }
   updateCollisionData(collisionData) {
     this.setState({ collisionData });
@@ -55,15 +62,29 @@ class StateMap extends Component {
         stateGeoData = stateGeoData.filter(m => !m['hc-key']);
         // chart.hideLoading();
         // clearTimeout(fail);
-        renderMap(collisionData, stateGeoData, mapKey, this.props);
+        renderMap(collisionData, stateGeoData, mapKey, this.loadNationalMap.bind(this), this.loadDetailModal.bind(this));
       });
     }
   }
-  componentDidUpdate(prevProps, prevState) {
-    console.log(`Update Map`);
-    if (prevProps.location !== this.props.location) {
-      this.getMapData();
-    }
+  loadNationalMap() {
+    const activeYear = this.props.match.params.year;
+    this.props.history.push(`/events/US/${activeYear}`)
+  }
+  handleModalClose() {
+    this.setState({ isModalOpen: false });
+  }
+  updateModalData(city, cityEventData) {
+    this.setState({
+      isModalOpen: true,
+      selectedCity: city,
+      modalEventData: cityEventData
+    });
+  }
+  loadDetailModal(point) {
+    const year = point.year;
+    const state = point.localState;
+    const city = point.localCity;
+    getMethods.getEventsByYearStateCity(year, state, city.toUpperCase(), this.updateModalData.bind(this));
   }
   render() {
     const activeYear = this.props.match.params.year;
@@ -72,6 +93,8 @@ class StateMap extends Component {
         <CircularProgress size={300} thickness={7} style={{marginTop: '18em'}}/>
       </div>
     }
+    const modalTitle = this.state.selectedCity ?
+      `Near Mid Air Collisions in ${properCase(this.state.selectedCity)}, ${this.props.match.params.state} (${activeYear})` : '';
     return (
       <div>
         <div id="stateMap"></div>
@@ -79,13 +102,20 @@ class StateMap extends Component {
           activeYear={activeYear}
           url={this.props.match.url}
         />
+        <DetailModal
+          title={modalTitle}
+          handleClose={this.handleModalClose.bind(this)}
+          selectedCity={this.state.selectedCity}
+          modalEventData={this.state.modalEventData}
+          open={this.state.isModalOpen}
+        />
       </div>
     )
   }
 }
 
-function renderMap(collisionData, stateGeoData, mapKey, props) {
-  const max = Math.max.apply(null, collisionData.map((d) => d.value));
+function renderMap(collisionData, stateGeoData, mapKey, loadNationalMap, loadDetailModal) {
+  const state = collisionData[0].localState;
   Highcharts.mapChart('stateMap', {
     chart: {
       borderWidth: 0,
@@ -99,10 +129,7 @@ function renderMap(collisionData, stateGeoData, mapKey, props) {
       buttons: [{
         text: 'Return to US',
         _titleKey: 'returnToUS',
-        onclick: function () {
-          const activeYear = props.match.params.year;
-          props.history.push(`/events/US/${activeYear}`)
-        },
+        onclick: loadNationalMap,
         theme: {
           'stroke-width': 1,
           stroke: 'silver',
@@ -132,6 +159,13 @@ function renderMap(collisionData, stateGeoData, mapKey, props) {
       }
     },
     plotOptions: {
+      series: {
+        events: {
+          click: function (e) {
+            loadDetailModal(e.point);
+          }
+        }
+      },
       map: {
         states: {
           hover: {
@@ -148,37 +182,20 @@ function renderMap(collisionData, stateGeoData, mapKey, props) {
       },
       {
         type: 'mapbubble',
-        name: props.match.params.state,
+        name: `${state} Near Mid Air Collisions`,
         data: collisionData,
         minSize: 4,
         maxSize: '12%',
         dataLabels: {
           enabled: true,
-          format: '{point.localCity} - {point.z} collisions'
+          format: '{point.z}'
         },
         tooltip: {
-          format: '{point.localCity} - {point.z} collisions'
+          pointFormat: '{point.localCity} - {point.z} collisions'
         }
       }
     ]
   });
 }
-
-// function addDrillUpButton(chart) {
-//   const normalState = new Object();
-//   normalState.stroke_width = null;
-//   normalState.stroke = null;
-//   normalState.fill = null;
-//   normalState.padding = null;
-//   normalState.r = null;
-//   normalState.rx = null;
-//
-//   let pressedState = new Object();
-//   pressedState = normalState;
-//
-//   const custombutton = chart.renderer.button('Return to US Map', 800, 10, () => {
-//
-//   }, null, null, pressedState).add();
-// }
 
 export default withRouter(StateMap);

@@ -3,7 +3,7 @@ import NationalMap from './NationalMap';
 import StateMap from './StateMap';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import { orange50 as accent, red700 as primary, black } from 'material-ui/styles/colors';
+import { grey200 as accent, red700 as primary, black } from 'material-ui/styles/colors';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';

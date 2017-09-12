@@ -16,7 +16,7 @@ class NationalMap extends Component {
     }
   }
   getMapData() {
-    const activeYear = parseInt(this.props.match.params.year);
+    const activeYear = parseInt(this.props.match.params.year, 10);
     getMethods.getEventCountsByYear(activeYear, this.updateCollisionData.bind(this));
   }
   componentDidMount() {

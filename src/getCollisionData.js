@@ -26,6 +26,11 @@ async function getEventsByYearAndState(year, state, updateCollisionData) {
   updateCollisionData(seriesData);
 }
 
+async function getEventsByYearStateCity(year, state, city, updateCollisionData) {
+  const data = await getCollisionData(`events/year/${year}/state/${state}/city/${city}`);
+  updateCollisionData(city, data);
+}
+
 async function getEventCountsByYear(year, updateCollisionData) {
   const data = await getCollisionData(`eventCounts/year/${year}`);
   const aggregatedData = data.reduce((acc, curr) => {
@@ -60,6 +65,7 @@ async function getEventCountsByYearAndState(year, state, updateCollisionData) {
 export default {
   getEvent,
   getEventsByYearAndState,
+  getEventsByYearStateCity,
   getEventCountsByYear,
   getEventCountsByYearAndState
 };

@@ -28,3 +28,14 @@ html, body {
   vertical-align: top;
   margin-left: 0.5em;
 }
+
+#nationalMap, #stateMap {
+  height: 400px;
+}
+
+.yearStepperWrapper {
+  width: 100%;
+  overflowX: scroll;
+  height: 102px;
+  border: 1px solid grey;
+}

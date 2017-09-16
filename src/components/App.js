@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import NationalMap from './NationalMap';
-import StateMap from './StateMap';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { grey200 as accent, red700 as primary, black } from 'material-ui/styles/colors';
-import AppBar from 'material-ui/AppBar';
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
+import MenuItem from 'material-ui/MenuItem';
+import Drawer from 'material-ui/Drawer';
+import AppBar from 'material-ui/AppBar';
+import NationalMap from './NationalMap';
+import StateMap from './StateMap';
 
 const muiTheme = getMuiTheme({
   fontFamily: 'Roboto Slab, sans-serif',
@@ -22,13 +22,10 @@ const muiTheme = getMuiTheme({
 
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       drawerOpen: false,
-      // mapData: null,
-      // activeYear: 2017,
-      // activeState: null,
-    }
+    };
   }
   toggleDrawer() {
     const drawerOpen = !this.state.drawerOpen;
@@ -38,16 +35,15 @@ class App extends Component {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <div className="App">
-          {/*<AppBar title={`Near Mid Air Collisons (NMACS) - ${this.state.activeYear}`}/>*/}
-          <AppBar title={`Near Mid Air Collisons (NMACS)`} onLeftIconButtonTouchTap={this.toggleDrawer.bind(this)}/>
+          <AppBar title={'Near Mid Air Collisons (NMACS)'} onLeftIconButtonTouchTap={this.toggleDrawer.bind(this)} />
           <Drawer open={this.state.drawerOpen}>
-            <MenuItem primaryText="Close" onClick={this.toggleDrawer.bind(this)}/>
+            <MenuItem primaryText="Close" onClick={this.toggleDrawer.bind(this)} />
           </Drawer>
           <div className="container-full">
             <Switch>
               <Route path="/events/US/:year" component={NationalMap} />
               <Route path="/events/:state/:year" component={StateMap} />
-              <Redirect from="/" to="/events/US/2017"/>
+              <Redirect from="/" to="/events/US/2017" />
             </Switch>
           </div>
         </div>

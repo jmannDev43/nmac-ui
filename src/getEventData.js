@@ -1,11 +1,9 @@
 import properCase from 'proper-case';
 
 async function getCollisionData(addToUrl) {
-  const collisionData = []
-  await fetch(`http://localhost:8080/${addToUrl}`)
-    .then(blob => blob.json())
-    .then(data => collisionData.push(...data));
-  return collisionData;
+  const response = await fetch(`http://localhost:8080/${addToUrl}`)
+  const data = await response.json();
+  return data;
 }
 
 async function getEvent(eventId, updateCollisionData) {
@@ -21,17 +19,17 @@ async function getEventsByYearAndState(year, state, updateCollisionData) {
     localCity: d.localCity,
     localState: d.localState,
     z: d.eventCount,
-    year: d.eventYear
+    year: d.eventYear,
   }));
   updateCollisionData(seriesData);
 }
 
-async function getEventsByYearStateCity(year, state, city, updateCollisionData) {
+async function getEventsByYearStateCity(year, state, city) {
   const data = await getCollisionData(`events/year/${year}/state/${state}/city/${city}`);
-  updateCollisionData(city, data);
+  return data;
 }
 
-async function getEventCountsByYear(year, updateCollisionData) {
+async function getEventCountsByYear(year) {
   const data = await getCollisionData(`eventCounts/year/${year}`);
   const aggregatedData = data.reduce((acc, curr) => {
     if (!acc[curr.localState]) {
@@ -39,17 +37,17 @@ async function getEventCountsByYear(year, updateCollisionData) {
         localState: curr.localState,
         drilldown: `us-${curr.localState.toLowerCase()}`,
         value: 0,
-        year: curr.eventYear
-      }
+        year: curr.eventYear,
+      };
     }
     acc[curr.localState].value += curr.eventCount;
     return acc;
   }, {});
   const seriesData = Object.values(aggregatedData);
-  updateCollisionData(seriesData);
+  return seriesData;
 }
 
-async function getEventCountsByYearAndState(year, state, updateCollisionData) {
+async function getEventCountsByYearAndState(year, state) {
   const data = await getCollisionData(`eventCounts/year/${year}/state/${state}`);
   const seriesData = data.map(d => ({
     lat: d.latitude,
@@ -57,9 +55,9 @@ async function getEventCountsByYearAndState(year, state, updateCollisionData) {
     localCity: properCase(d.localCity),
     localState: d.localState,
     z: d.eventCount,
-    year: d.eventYear
+    year: d.eventYear,
   }));
-  updateCollisionData(seriesData);
+  return seriesData;
 }
 
 export default {
@@ -67,5 +65,5 @@ export default {
   getEventsByYearAndState,
   getEventsByYearStateCity,
   getEventCountsByYear,
-  getEventCountsByYearAndState
+  getEventCountsByYearAndState,
 };

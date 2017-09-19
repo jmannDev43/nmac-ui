@@ -73,7 +73,7 @@ function renderMap(eventData, props) {
           format: '{point.localState} - {point.value}',
         },
         tooltip: {
-          pointFormat: '{point.localState}, {point.value} collisions',
+          pointFormat: '{point.localState}, {point.value} near collisions',
         },
         data: eventData,
         mapData,

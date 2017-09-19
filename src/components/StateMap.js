@@ -64,7 +64,7 @@ function renderMap(eventData, stateGeoData, mapKey, loadDetailModal) {
           format: '{point.z}',
         },
         tooltip: {
-          pointFormat: '{point.localCity} - {point.z} collisions',
+          pointFormat: '{point.localCity} - {point.z} near collisions',
         },
       },
     ],

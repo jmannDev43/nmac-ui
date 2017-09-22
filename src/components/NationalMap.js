@@ -6,7 +6,7 @@ import Dialog from 'material-ui/Dialog';
 import StateMap from './StateMap';
 import getMethods from '../getEventData';
 import YearStepper from './YearStepper';
-import loadStateMapData from '../loadStateMapData';
+import mapMethods from '../loadStateMapData';
 
 const Highcharts = require('highcharts/highmaps');
 
@@ -17,15 +17,19 @@ if (!window.Highcharts) {
   window.Highcharts = Highcharts;
 }
 // pre-load US (for performance) & CA data (in case offline, to show drilldown functionality)
-require('../third-party/us-all');
+require('../third-party/us-all-territories');
 require('../third-party/us-ca-all');
 
 function drillIntoState(component, e) {
-  loadStateMapData(e.point.localState, (isLoaded, err) => {
-    if (isLoaded) {
-      const url = component.props.match.url.replace('US', e.point.localState);
+  const country = e.point.properties.hasc.split('.')[0];
+  // PR is inconsistent with the rest of the Highcharts US territory map data...
+  const state = country === 'PR' ? 'PR' : e.point.properties.hasc.split('.')[1];
+  mapMethods.loadStateMapData(country, state, (response) => {
+    if (response.isLoaded) {
+      const year = component.props.match.params.year;
+      const url = `/events/state/${year}/${country}/${state}`;
       component.props.history.push(url);
-    } else if (err) {
+    } else if (response.error) {
       component.setState({ showErrorModal: true });
     }
   });
@@ -37,7 +41,7 @@ function renderMap(that, eventData) {
     chart: {
       borderWidth: 0,
       backgroundColor: '',
-      map: 'countries/us/us-all',
+      map: 'countries/us/custom/us-all-territories',
     },
     title: {
       text: '',
@@ -87,13 +91,23 @@ function renderMap(that, eventData) {
         },
         dataLabels: {
           enabled: true,
-          format: '{point.localState} - {point.value}',
+          formatter: function () {
+            return this.point.value ? `${this.point.properties['hc-a2']}-${this.point.value}` : this.point.properties['hc-a2'];
+          },
         },
         tooltip: {
-          pointFormat: '{point.localState}, {point.value} near collisions',
+          pointFormat: '{point.name}, {point.value} near collisions',
         },
         data: eventData,
-        joinBy: ['hc-a2', 'localState'],
+        joinBy: ['hasc', 'hascCode'],
+      },
+      {
+        name: 'Separators',
+        type: 'mapline',
+        data: Highcharts.geojson(Highcharts.maps['countries/us/custom/us-all-territories'], 'mapline'),
+        color: 'grey',
+        showInLegend: false,
+        enableMouseTracking: false,
       },
     ],
   });

@@ -6,8 +6,10 @@ import { withRouter } from 'react-router-dom';
 import getMethods from '../getEventData';
 import YearStepper from './YearStepper';
 import DetailModal from './DetailModal';
-import loadStateMapData from '../loadStateMapData';
+import mapMethods from '../loadStateMapData';
 
+// Necessary for Highmaps to plot lat/long data...
+window.proj4 = require('../third-party/proj4');
 const Highcharts = require('highcharts/highmaps');
 require('highcharts/modules/exporting')(Highcharts);
 
@@ -86,9 +88,10 @@ class StateMap extends Component {
   }
   componentDidMount() {
     const state = this.props.match.params.state;
-    const mapKey = `countries/us/us-${state.toLowerCase()}-all`;
+    const country = this.props.match.params.country;
+    const mapKey = mapMethods.getMapKey(country, state);
     if (!Highcharts.maps[mapKey]) {
-      loadStateMapData(state, this.getMapData.bind(this));
+      mapMethods.loadStateMapData(country, state, this.getMapData.bind(this));
     } else {
       this.getMapData();
     }
@@ -101,11 +104,12 @@ class StateMap extends Component {
   getMapData() {
     const activeYear = parseInt(this.props.match.params.year, 10);
     const state = this.props.match.params.state;
-    const mapKey = `countries/us/us-${state.toLowerCase()}-all`;
+    const country = this.props.match.params.country;
+    const mapKey = mapMethods.getMapKey(country, state);
     if (Highcharts.maps[mapKey]) {
       let stateGeoData = Highcharts.geojson(Highcharts.maps[mapKey]);
       stateGeoData = stateGeoData.filter(m => !m['hc-key']);
-      getMethods.getEventCountsByYearAndState(activeYear, state)
+      getMethods.getEventCountsByYearCountryAndState(activeYear, country, state)
         .then((eventData) => {
           this.setState({ eventData });
           renderMap(eventData, stateGeoData, mapKey, this.loadDetailModal.bind(this));
@@ -114,7 +118,7 @@ class StateMap extends Component {
   }
   loadNationalMap() {
     const activeYear = this.props.match.params.year;
-    this.props.history.push(`/events/US/${activeYear}`);
+    this.props.history.push(`/events/national/${activeYear}`);
   }
   closeDetailModal() {
     this.setState({ isModalOpen: false });

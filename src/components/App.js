@@ -41,9 +41,9 @@ class App extends Component {
           </Drawer>
           <div className="container-full">
             <Switch>
-              <Route path="/events/US/:year" component={NationalMap} />
-              <Route path="/events/:state/:year" component={StateMap} />
-              <Redirect from="/" to="/events/US/2017" />
+              <Route path="/events/national/:year" component={NationalMap} />
+              <Route path="/events/state/:year/:country/:state" component={StateMap} />
+              <Redirect from="/" to="/events/national/2017" />
             </Switch>
           </div>
         </div>

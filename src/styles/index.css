@@ -6,8 +6,7 @@ body {
 
 html, body {
   background-color: #5e6063 !important;
-  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-image: url('black-linen.png'); /* https://www.transparenttextures.com */
   font-family: 'Roboto Slab', sans-serif !important;
 }
 

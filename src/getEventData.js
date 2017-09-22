@@ -1,5 +1,9 @@
 import properCase from 'proper-case';
 
+function getHascCode(state, country) {
+  return state === 'PR' ? 'PR.' : `${country}.${state}`;
+}
+
 async function getEventData(addToUrl) {
   const response = await fetch(`http://localhost:8080/${addToUrl}`);
   const data = await response.json();
@@ -16,8 +20,9 @@ async function getEventCountsByYear(year) {
   const aggregatedData = data.reduce((acc, curr) => {
     if (!acc[curr.localState]) {
       acc[curr.localState] = {
+        localCountry: curr.localCountry,
         localState: curr.localState,
-        drilldown: `us-${curr.localState.toLowerCase()}`,
+        hascCode: getHascCode(curr.localState, curr.localCountry),
         value: 0,
         year: curr.eventYear,
       };
@@ -29,13 +34,15 @@ async function getEventCountsByYear(year) {
   return seriesData;
 }
 
-async function getEventCountsByYearAndState(year, state) {
-  const data = await getEventData(`eventCounts/year/${year}/state/${state}`);
+async function getEventCountsByYearCountryAndState(year, country, state) {
+  const data = await getEventData(`eventCounts/year/${year}/country/${country}/state/${state}`);
   const seriesData = data.map(d => ({
     lat: d.latitude,
     lon: d.longitude,
     localCity: properCase(d.localCity),
     localState: d.localState,
+    localCountry: d.localCountry,
+    hascCode: getHascCode(d.localState, d.localCountry),
     z: d.eventCount,
     year: d.eventYear,
   }));
@@ -45,5 +52,5 @@ async function getEventCountsByYearAndState(year, state) {
 export default {
   getEventsByYearStateCity,
   getEventCountsByYear,
-  getEventCountsByYearAndState,
+  getEventCountsByYearCountryAndState,
 };

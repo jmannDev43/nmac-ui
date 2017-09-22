@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import CircularProgress from 'material-ui/CircularProgress';
 import RaisedButton from 'material-ui/RaisedButton';
-import load from '@segment/load-script';
 import properCase from 'proper-case';
 import { withRouter } from 'react-router-dom';
 import getMethods from '../getEventData';
 import YearStepper from './YearStepper';
 import DetailModal from './DetailModal';
+import loadStateMapData from '../loadStateMapData';
 
 const Highcharts = require('highcharts/highmaps');
 require('highcharts/modules/exporting')(Highcharts);
 
 function renderMap(eventData, stateGeoData, mapKey, loadDetailModal) {
-  const state = 'countries/us/us-ca-all'.split('-')[1].toUpperCase();
+  const state = mapKey.split('-')[1].toUpperCase();
   Highcharts.mapChart('stateMap', {
     chart: {
       borderWidth: 0,
@@ -24,6 +24,9 @@ function renderMap(eventData, stateGeoData, mapKey, loadDetailModal) {
     },
     legend: {
       enabled: true,
+      itemStyle: {
+        color: 'white',
+      },
     },
     mapNavigation: {
       enabled: true,
@@ -82,7 +85,13 @@ class StateMap extends Component {
     };
   }
   componentDidMount() {
-    this.getMapData();
+    const state = this.props.match.params.state;
+    const mapKey = `countries/us/us-${state.toLowerCase()}-all`;
+    if (!Highcharts.maps[mapKey]) {
+      loadStateMapData(state, this.getMapData.bind(this));
+    } else {
+      this.getMapData();
+    }
   }
   componentDidUpdate(prevProps) {
     if (prevProps.location !== this.props.location) {
@@ -92,44 +101,22 @@ class StateMap extends Component {
   getMapData() {
     const activeYear = parseInt(this.props.match.params.year, 10);
     const state = this.props.match.params.state;
-    getMethods.getEventCountsByYearAndState(activeYear, state)
-      .then(data => this.updateEventData(data));
-  }
-  updateEventData(eventData) {
-    this.setState({ eventData });
-    const state = this.props.match.params.state.toLowerCase();
-    const mapKey = `countries/us/us-${state}-all`;
-
-    // This is only necessary, because Highcharts' mapData .js files add properties to the
-    // Highcharts.maps object and so expects Highcharts to be globally available
-    // immediately at the time it's loaded...
-    if (!window.Highcharts) {
-      window.Highcharts = Highcharts;
-    }
-
+    const mapKey = `countries/us/us-${state.toLowerCase()}-all`;
     if (Highcharts.maps[mapKey]) {
       let stateGeoData = Highcharts.geojson(Highcharts.maps[mapKey]);
       stateGeoData = stateGeoData.filter(m => !m['hc-key']);
-      renderMap(eventData, stateGeoData, mapKey, this.loadDetailModal.bind(this));
-    } else {
-      const srcUrl = `https://code.highcharts.com/mapdata/${mapKey}.js`;
-      load(srcUrl, () => {
-        let stateGeoData = Highcharts.geojson(Highcharts.maps[mapKey]);
-        stateGeoData = stateGeoData.filter(m => !m['hc-key']);
-        renderMap(
-          eventData,
-          stateGeoData,
-          mapKey,
-          this.loadDetailModal.bind(this),
-        );
-      });
+      getMethods.getEventCountsByYearAndState(activeYear, state)
+        .then((eventData) => {
+          this.setState({ eventData });
+          renderMap(eventData, stateGeoData, mapKey, this.loadDetailModal.bind(this));
+        });
     }
   }
   loadNationalMap() {
     const activeYear = this.props.match.params.year;
     this.props.history.push(`/events/US/${activeYear}`);
   }
-  handleModalClose() {
+  closeDetailModal() {
     this.setState({ isModalOpen: false });
   }
   updateModalData(city, cityEventData) {
@@ -170,7 +157,7 @@ class StateMap extends Component {
         />
         <DetailModal
           title={modalTitle}
-          handleClose={this.handleModalClose.bind(this)}
+          handleClose={this.closeDetailModal.bind(this)}
           selectedCity={this.state.selectedCity}
           modalEventData={this.state.modalEventData}
           open={this.state.isModalOpen}

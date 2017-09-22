@@ -1,16 +1,37 @@
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import CircularProgress from 'material-ui/CircularProgress';
+import FlatButton from 'material-ui/FlatButton';
+import Dialog from 'material-ui/Dialog';
 import StateMap from './StateMap';
 import getMethods from '../getEventData';
 import YearStepper from './YearStepper';
-import mapData from '../third-party/us-all';
+import loadStateMapData from '../loadStateMapData';
 
 const Highcharts = require('highcharts/highmaps');
 
-Highcharts.maps['countries/us/us-all'] = mapData;
+// This is only necessary, because Highcharts' mapData .js files add properties to the
+// Highcharts.maps object and so expects Highcharts to be globally available
+// immediately at the time it's loaded...
+if (!window.Highcharts) {
+  window.Highcharts = Highcharts;
+}
+// pre-load US (for performance) & CA data (in case offline, to show drilldown functionality)
+require('../third-party/us-all');
+require('../third-party/us-ca-all');
 
-function renderMap(eventData, props) {
+function drillIntoState(component, e) {
+  loadStateMapData(e.point.localState, (isLoaded, err) => {
+    if (isLoaded) {
+      const url = component.props.match.url.replace('US', e.point.localState);
+      component.props.history.push(url);
+    } else if (err) {
+      component.setState({ showErrorModal: true });
+    }
+  });
+}
+
+function renderMap(that, eventData) {
   const max = Math.max.apply(null, eventData.map(d => d.value));
   Highcharts.mapChart('nationalMap', {
     chart: {
@@ -38,10 +59,7 @@ function renderMap(eventData, props) {
     plotOptions: {
       series: {
         events: {
-          click(e) {
-            const url = props.match.url.replace('US', e.point.localState);
-            props.history.push(url);
-          },
+          click: drillIntoState.bind(null, that),
         },
       },
       map: {
@@ -55,7 +73,6 @@ function renderMap(eventData, props) {
     series: [
       {
         name: 'States',
-        mapData,
         color: '#E0E0E0',
       },
       {
@@ -76,7 +93,6 @@ function renderMap(eventData, props) {
           pointFormat: '{point.localState}, {point.value} near collisions',
         },
         data: eventData,
-        mapData,
         joinBy: ['hc-a2', 'localState'],
       },
     ],
@@ -88,12 +104,13 @@ class NationalMap extends Component {
     super();
     this.state = {
       eventData: null,
+      showErrorModal: false,
     };
   }
   componentDidMount() {
     this.getMapData();
   }
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     if (prevProps.location !== this.props.location) {
       this.getMapData();
     }
@@ -101,11 +118,13 @@ class NationalMap extends Component {
   getMapData() {
     const activeYear = parseInt(this.props.match.params.year, 10);
     getMethods.getEventCountsByYear(activeYear)
-      .then(data => this.updateEventData(data));
+      .then((eventData) => {
+        this.setState({ eventData });
+        renderMap(this, eventData);
+      });
   }
-  updateEventData(eventData) {
-    this.setState({ eventData });
-    renderMap(eventData, this.props);
+  closeErrorModal() {
+    this.setState({ showErrorModal: false });
   }
   render() {
     const activeYear = this.props.match.params.year;
@@ -114,6 +133,13 @@ class NationalMap extends Component {
         <CircularProgress size={300} thickness={7} style={{ marginTop: '18em' }} />
       </div>);
     }
+    const actions = [
+      <FlatButton
+        label="Close"
+        primary
+        onClick={this.closeErrorModal.bind(this)}
+      />,
+    ];
     return (
       <div>
         <Route path={'events/:state/:year'} component={StateMap} />
@@ -122,6 +148,21 @@ class NationalMap extends Component {
           activeYear={activeYear}
           url={this.props.match.url}
         />
+        <Dialog
+          title="Unable to retrieve map data"
+          actions={actions}
+          modal={false}
+          open={this.state.showErrorModal}
+          onRequestClose={this.closeErrorModal}
+          paperProps={{ zDepth: 0 }}
+        >
+          Unable to retrieve map data for the selected state.
+          This may be due to a poor internet connection.
+          <br /><br />
+          Please check your connection and try again.
+          <br /><br />
+          *Note: CA map data is available offline, for localhost demo purposes :)
+        </Dialog>
       </div>
     );
   }

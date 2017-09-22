@@ -8,6 +8,7 @@
     "material-ui": "^0.19.1",
     "popsicle": "^9.1.0",
     "proj4": "^2.4.4",
+    "prop-types": "^15.5.10",
     "proper-case": "^1.0.5",
     "rc-slider": "^8.3.1",
     "react": "^15.6.1",
@@ -21,15 +22,34 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom --coverage --watch",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "enzyme": "^2.9.1",
     "eslint": "^4.6.1",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.3.0",
-    "jest": "^21.1.0"
+    "jest": "^21.1.0",
+    "react-test-renderer": "^15.6.1"
+  },
+  "eslintConfig": {
+    "globals": {
+      "window": true,
+      "afterAll": true,
+      "afterEach": true,
+      "beforeAll": true,
+      "beforeEach": true,
+      "describe": true,
+      "it": true,
+      "expect": true
+    }
+  },
+  "jest": {
+    "coverageReporters": [
+      "html", "text"
+    ]
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Step, StepLabel, Stepper, StepButton } from 'material-ui/Stepper';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import PlayArrow from 'material-ui/svg-icons/av/play-arrow';
@@ -103,5 +104,17 @@ class YearStepper extends Component {
     );
   }
 }
+
+YearStepper.propTypes = {
+  history: PropTypes.object,
+  activeYear: PropTypes.string,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      year: PropTypes.string,
+      state: PropTypes.string,
+    }),
+    path: PropTypes.string,
+  }),
+};
 
 export default withRouter(YearStepper);

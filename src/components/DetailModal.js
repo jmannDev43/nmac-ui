@@ -9,7 +9,6 @@ import {
   TableRow,
   TableRowColumn,
 } from 'material-ui/Table';
-import CircularProgress from 'material-ui/CircularProgress';
 import AirPlaneModeActive from 'material-ui/svg-icons/device/airplanemode-active';
 
 const DetailModal = (props) => {
@@ -19,7 +18,7 @@ const DetailModal = (props) => {
   };
   const actions = [
     <FlatButton
-      label="Cancel"
+      label="Close"
       primary
       onClick={props.handleClose}
     />,
@@ -30,11 +29,8 @@ const DetailModal = (props) => {
   };
 
   if (!props.modalEventData) {
-    return (<div style={{ height: (window.innerHeight - 30), textAlign: 'center' }}>
-      <CircularProgress size={300} thickness={7} style={{ marginTop: '18em' }} />
-    </div>);
+    return null;
   }
-
   return (
     <div id="detailModalWrapper">
       <Dialog
@@ -45,6 +41,7 @@ const DetailModal = (props) => {
         contentStyle={customContentStyle}
         onRequestClose={props.handleClose}
         autoScrollBodyContent
+        paperProps={{ zDepth: 0 }}
       >
         <Table>
           <TableHeader displaySelectAll={false} adjustForCheckbox={false}>

@@ -1,7 +1,7 @@
 import properCase from 'proper-case';
 
 async function getEventData(addToUrl) {
-  const response = await fetch(`http://localhost:8080/${addToUrl}`)
+  const response = await fetch(`http://localhost:8080/${addToUrl}`);
   const data = await response.json();
   return data;
 }

@@ -50,6 +50,7 @@ async function getEventCountsByYearCountryAndState(year, country, state) {
 }
 
 export default {
+  getHascCode,
   getEventsByYearStateCity,
   getEventCountsByYear,
   getEventCountsByYearCountryAndState,

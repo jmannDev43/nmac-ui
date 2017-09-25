@@ -25,24 +25,29 @@ class App extends Component {
     super();
     this.state = {
       drawerOpen: false,
+      navTitle: '',
     };
   }
   toggleDrawer() {
     const drawerOpen = !this.state.drawerOpen;
     this.setState({ drawerOpen });
   }
+  updateNavTitle(appendToTitle) {
+    const navTitle = `Near Mid Air Collisions (NMACs) - ${appendToTitle}`;
+    this.setState({ navTitle });
+  }
   render() {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <div className="App">
-          <AppBar title={'Near Mid Air Collisons (NMACS)'} onLeftIconButtonTouchTap={this.toggleDrawer.bind(this)} />
+          <AppBar title={this.state.navTitle} onLeftIconButtonTouchTap={this.toggleDrawer.bind(this)} />
           <Drawer open={this.state.drawerOpen}>
             <MenuItem primaryText="Close" onClick={this.toggleDrawer.bind(this)} />
           </Drawer>
           <div className="container-full">
             <Switch>
-              <Route path="/events/national/:year" component={NationalMap} />
-              <Route path="/events/state/:year/:country/:state" component={StateMap} />
+              <Route path="/events/national/:year" render={() => <NationalMap updateTitle={this.updateNavTitle.bind(this)} />} />
+              <Route path="/events/state/:year/:country/:state" render={() => <StateMap updateTitle={this.updateNavTitle.bind(this)} />} />
               <Redirect from="/" to="/events/national/2017" />
             </Switch>
           </div>

@@ -4,7 +4,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 import FlatButton from 'material-ui/FlatButton';
 import Dialog from 'material-ui/Dialog';
 import StateMap from './StateMap';
-import getMethods from '../getEventData';
+import eventMethods from '../getEventData';
 import YearStepper from './YearStepper';
 import mapMethods from '../loadStateMapData';
 
@@ -72,6 +72,13 @@ function renderMap(that, eventData) {
             color: '#ff4852',
           },
         },
+        point: {
+          events: {
+            mouseOver: function (e) {
+              this.graphic.element.style.cursor = 'pointer';
+            },
+          },
+        },
       },
     },
     series: [
@@ -122,16 +129,17 @@ class NationalMap extends Component {
     };
   }
   componentDidMount() {
-    this.getMapData();
+    this.getEventsAndRender();
   }
   componentDidUpdate(prevProps) {
     if (prevProps.location !== this.props.location) {
-      this.getMapData();
+      this.getEventsAndRender();
     }
   }
-  getMapData() {
+  getEventsAndRender() {
     const activeYear = parseInt(this.props.match.params.year, 10);
-    getMethods.getEventCountsByYear(activeYear)
+    this.props.updateTitle(`US (${activeYear})`);
+    eventMethods.getEventCountsByYear(activeYear)
       .then((eventData) => {
         this.setState({ eventData });
         renderMap(this, eventData);
@@ -160,7 +168,6 @@ class NationalMap extends Component {
         <div id="nationalMap" />
         <YearStepper
           activeYear={activeYear}
-          url={this.props.match.url}
         />
         <Dialog
           title="Unable to retrieve map data"

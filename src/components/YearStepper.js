@@ -24,7 +24,9 @@ class YearStepper extends Component {
   updateStep(year) {
     let url = this.props.match.path.replace(':year', year);
     if (url.indexOf(':state') > -1) {
-      url = url.replace(':state', this.props.match.params.state);
+      url = url
+        .replace(':state', this.props.match.params.state)
+        .replace(':country', this.props.match.params.country);
     }
     this.props.history.push(url);
   }
@@ -32,6 +34,7 @@ class YearStepper extends Component {
     console.log('Starting Player');
     this.setState({ isPlaying: true });
     const currentYear = parseInt(this.props.match.params.year, 10);
+    const timeInterval = this.props.match.url.indexOf('state') > -1 ? 2000 : 1000;
     const maxYear = Math.max.apply(null, collisionYears);
     let yearIndex = currentYear === maxYear ? 0 : collisionYears.indexOf(currentYear);
     intervalId = setInterval(() => {
@@ -41,7 +44,7 @@ class YearStepper extends Component {
       }
       yearIndex += 1;
       this.updateStep(year);
-    }, 1000);
+    }, timeInterval);
   }
   stopTimeline() {
     clearInterval(intervalId);
@@ -76,9 +79,9 @@ class YearStepper extends Component {
           </Stepper>
         </div>
         {this.state.isPlaying ?
-          <div className="col col-sm-1">
+          <div className="col col-sm-2">
             <FloatingActionButton
-              style={{ margin: '1em' }}
+              style={{ margin: '1em 2em 0 1em' }}
               secondary={false}
               mini
               onClick={this.stopTimeline.bind(this)}
@@ -86,11 +89,12 @@ class YearStepper extends Component {
               <Stop />
             </FloatingActionButton>
             <CircularProgress size={30} />
+            <h3 className="stepperYear">Loading {parseInt(this.props.activeYear, 10) + 1}...</h3>
           </div>
           :
-          <div className="col col-sm-1">
+          <div className="col col-sm-2">
             <FloatingActionButton
-              style={{ margin: '1em', boxShadow: 'rgba(90, 211, 47, 0.16) 0px 3px 10px, rgba(90, 211, 47, 0.23) 0px 3px 10px' }}
+              style={{ margin: '1em 2em 0 1em', boxShadow: 'rgba(90, 211, 47, 0.16) 0px 3px 10px, rgba(90, 211, 47, 0.23) 0px 3px 10px' }}
               backgroundColor="#00E676"
               mini
               onClick={this.playTimeline.bind(this)}
@@ -99,7 +103,6 @@ class YearStepper extends Component {
             </FloatingActionButton>
           </div>
         }
-        <h2 className="stepperYear">{this.props.activeYear}</h2>
       </div>
     );
   }
@@ -112,7 +115,9 @@ YearStepper.propTypes = {
     params: PropTypes.shape({
       year: PropTypes.string,
       state: PropTypes.string,
+      country: PropTypes.string,
     }),
+    url: PropTypes.string,
     path: PropTypes.string,
   }),
 };

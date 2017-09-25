@@ -3,7 +3,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 import RaisedButton from 'material-ui/RaisedButton';
 import properCase from 'proper-case';
 import { withRouter } from 'react-router-dom';
-import getMethods from '../getEventData';
+import eventMethods from '../getEventData';
 import YearStepper from './YearStepper';
 import DetailModal from './DetailModal';
 import mapMethods from '../loadStateMapData';
@@ -91,25 +91,26 @@ class StateMap extends Component {
     const country = this.props.match.params.country;
     const mapKey = mapMethods.getMapKey(country, state);
     if (!Highcharts.maps[mapKey]) {
-      mapMethods.loadStateMapData(Highcharts, country, state, this.getMapData.bind(this));
+      mapMethods.loadStateMapData(Highcharts, country, state, this.getEventsAndRender.bind(this));
     } else {
-      this.getMapData();
+      this.getEventsAndRender();
     }
   }
   componentDidUpdate(prevProps) {
     if (prevProps.location !== this.props.location) {
-      this.getMapData();
+      this.getEventsAndRender();
     }
   }
-  getMapData() {
+  getEventsAndRender() {
     const activeYear = parseInt(this.props.match.params.year, 10);
     const state = this.props.match.params.state;
     const country = this.props.match.params.country;
+    this.props.updateTitle(`${state}, ${country} (${activeYear})`);
     const mapKey = mapMethods.getMapKey(country, state);
     if (Highcharts.maps[mapKey]) {
       let stateGeoData = Highcharts.geojson(Highcharts.maps[mapKey]);
       stateGeoData = stateGeoData.filter(m => !m['hc-key']);
-      getMethods.getEventCountsByYearCountryAndState(activeYear, country, state)
+      eventMethods.getEventCountsByYearCountryAndState(activeYear, country, state)
         .then((eventData) => {
           this.setState({ eventData });
           renderMap(eventData, stateGeoData, mapKey, this.loadDetailModal.bind(this));
@@ -134,7 +135,7 @@ class StateMap extends Component {
     const year = point.year;
     const state = point.localState;
     const city = point.localCity;
-    getMethods.getEventsByYearStateCity(year, state, city.toUpperCase())
+    eventMethods.getEventsByYearStateCity(year, state, city.toUpperCase())
       .then(data => this.updateModalData(city, data));
   }
   render() {
@@ -157,7 +158,6 @@ class StateMap extends Component {
         <div id="stateMap" />
         <YearStepper
           activeYear={activeYear}
-          url={this.props.match.url}
         />
         <DetailModal
           title={modalTitle}

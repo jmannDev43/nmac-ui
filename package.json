@@ -17,6 +17,7 @@
     "react-scripts": "1.0.13",
     "react-tap-event-plugin": "^2.0.1",
     "request-promise-native": "^1.0.4",
+    "simple-load-script": "^1.0.2",
     "topojson": "^3.0.2"
   },
   "scripts": {
@@ -44,12 +45,14 @@
       "beforeEach": true,
       "describe": true,
       "it": true,
-      "expect": true
+      "expect": true,
+      "fetch": true
     }
   },
   "jest": {
     "coverageReporters": [
-      "html", "text"
+      "html",
+      "text"
     ]
   }
 }

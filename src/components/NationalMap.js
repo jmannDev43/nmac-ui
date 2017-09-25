@@ -24,7 +24,7 @@ function drillIntoState(component, e) {
   const country = e.point.properties.hasc.split('.')[0];
   // PR is inconsistent with the rest of the Highcharts US territory map data...
   const state = country === 'PR' ? 'PR' : e.point.properties.hasc.split('.')[1];
-  mapMethods.loadStateMapData(country, state, (response) => {
+  mapMethods.loadStateMapData(Highcharts, country, state, (response) => {
     if (response.isLoaded) {
       const year = component.props.match.params.year;
       const url = `/events/state/${year}/${country}/${state}`;

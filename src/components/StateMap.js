@@ -91,7 +91,7 @@ class StateMap extends Component {
     const country = this.props.match.params.country;
     const mapKey = mapMethods.getMapKey(country, state);
     if (!Highcharts.maps[mapKey]) {
-      mapMethods.loadStateMapData(country, state, this.getMapData.bind(this));
+      mapMethods.loadStateMapData(Highcharts, country, state, this.getMapData.bind(this));
     } else {
       this.getMapData();
     }

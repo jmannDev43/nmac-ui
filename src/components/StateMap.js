@@ -64,6 +64,7 @@ function renderMap(eventData, stateGeoData, mapKey, loadDetailModal) {
         data: eventData,
         minSize: 4,
         maxSize: '12%',
+        cursor: 'pointer',
         dataLabels: {
           enabled: true,
           format: '{point.z}',

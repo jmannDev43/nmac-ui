@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74b0caa4-5282-45a8-a5b2-14ac0adb1f64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/__tests__/getEventData.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/App.js" afterPath="$PROJECT_DIR$/src/components/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/NationalMap.js" afterPath="$PROJECT_DIR$/src/components/NationalMap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/StateMap.js" afterPath="$PROJECT_DIR$/src/components/StateMap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/YearStepper.js" afterPath="$PROJECT_DIR$/src/components/YearStepper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/__tests__/YearStepper.test.js" afterPath="$PROJECT_DIR$/src/components/__tests__/YearStepper.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/getEventData.js" afterPath="$PROJECT_DIR$/src/getEventData.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,8 +37,20 @@
       <file leaf-file-name="NationalMap.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/NationalMap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="176" column="47" lean-forward="false" selection-start-line="176" selection-start-column="47" selection-end-line="176" selection-end-column="47" />
+            <state relative-caret-position="255">
+              <caret line="76" column="33" lean-forward="false" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateMap.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/StateMap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="66" column="26" lean-forward="false" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -64,23 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StateMap.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/StateMap.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="159" column="33" lean-forward="false" selection-start-line="159" selection-start-column="33" selection-end-line="159" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getEventData.test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="getEventData.test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/__tests__/getEventData.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="22" column="60" lean-forward="false" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+            <state relative-caret-position="216">
+              <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -229,11 +221,11 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/App.js" />
         <option value="$PROJECT_DIR$/src/components/YearStepper.js" />
-        <option value="$PROJECT_DIR$/src/components/StateMap.js" />
         <option value="$PROJECT_DIR$/src/components/NationalMap.js" />
         <option value="$PROJECT_DIR$/src/components/__tests__/YearStepper.test.js" />
         <option value="$PROJECT_DIR$/src/getEventData.js" />
         <option value="$PROJECT_DIR$/src/__tests__/getEventData.test.js" />
+        <option value="$PROJECT_DIR$/src/components/StateMap.js" />
       </list>
     </option>
   </component>
@@ -486,7 +478,7 @@
       <workItem from="1505923265738" duration="494000" />
       <workItem from="1505927894594" duration="454000" />
       <workItem from="1505931611917" duration="41991000" />
-      <workItem from="1506282555252" duration="33557000" />
+      <workItem from="1506282555252" duration="33898000" />
     </task>
     <servers />
   </component>
@@ -523,7 +515,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195302000" />
+    <option name="totallyTimeSpent" value="195643000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -818,10 +810,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1506362196000" expanded="true" signature="4308:4329" ph="..." />
-            <marker date="1506362196000" expanded="true" signature="4384:4513" ph="..." />
-            <marker date="1506362196000" expanded="true" signature="4414:4503" ph="{...}" />
-            <marker date="1506362196000" expanded="true" signature="4463:4501" ph="{...}" />
+            <marker date="1506362753000" expanded="true" signature="4308:4329" ph="..." />
+            <marker date="1506362753000" expanded="true" signature="4384:4513" ph="..." />
+            <marker date="1506362753000" expanded="true" signature="4414:4503" ph="{...}" />
+            <marker date="1506362753000" expanded="true" signature="4463:4501" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -862,16 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NationalMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="176" column="47" lean-forward="false" selection-start-line="176" selection-start-column="47" selection-end-line="176" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/__tests__/__snapshots__/YearStepper.test.js.snap">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -898,16 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/StateMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="159" column="33" lean-forward="false" selection-start-line="159" selection-start-column="33" selection-end-line="159" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/YearStepper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -928,9 +900,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/__tests__/getEventData.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="22" column="60" lean-forward="false" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+        <state relative-caret-position="216">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NationalMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="76" column="33" lean-forward="false" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/StateMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="66" column="26" lean-forward="false" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

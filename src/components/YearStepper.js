@@ -52,12 +52,13 @@ class YearStepper extends Component {
     this.setState({ isPlaying: false });
   }
   render() {
+    const activeYear = parseInt(this.props.activeYear, 10);
     return (
       <div>
         <div className="yearStepperWrapper">
           <Stepper
             linear={false}
-            activeStep={collisionYears.indexOf(parseInt(this.props.activeYear, 10))}
+            activeStep={collisionYears.indexOf(activeYear)}
             connector={null}
           >
             {
@@ -89,7 +90,7 @@ class YearStepper extends Component {
               <Stop />
             </FloatingActionButton>
             <CircularProgress size={30} />
-            <h3 className="stepperYear">Loading {parseInt(this.props.activeYear, 10) + 1}...</h3>
+            <h3 className="stepperYear">Loading {activeYear === 2017 ? 1987 : (activeYear + 1) }...</h3>
           </div>
           :
           <div className="col col-sm-2">

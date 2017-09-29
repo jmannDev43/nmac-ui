@@ -1,0 +1,27 @@
+stages:
+  - build
+  - test
+#  - deploy
+
+build:
+  image: node:alpine
+  stage: build
+  script:
+    - npm install --progress=false
+    - npm run build
+  artifacts:
+    expire_in: 3 months
+    paths:
+      - build
+
+#before_script:
+#  - export CI=true
+
+test:
+  image: node:alpine
+  stage: test
+  variables:
+    CI: "true"
+  script:
+    - npm install --progress=false
+    - npm test

@@ -15,7 +15,7 @@ function loadStateMapData(Highcharts, country, state, callback) {
     loadScript(srcUrl).then(() => {
       callback({ isLoaded: !!Highcharts.maps[mapKey] });
     }).catch((error) => {
-      console.log('error', error);
+      // console.log('error', error);
       callback({ error });
     });
   } else {

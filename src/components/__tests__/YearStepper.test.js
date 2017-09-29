@@ -14,7 +14,6 @@ describe('<YearStepper />', () => {
         <YearStepper activeYear="2017" />
       </MuiThemeProvider>
     </BrowserRouter>).toJSON();
-    console.log('tree', tree);
     expect(tree).toMatchSnapshot();
   });
 });

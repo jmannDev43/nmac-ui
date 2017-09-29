@@ -27,7 +27,7 @@ describe('loadStateMapData.js', () => {
       };
     });
     it('Returns { isLoaded: false } when data key NOT found in maps array', () => {
-      loadScript.mockImplementationOnce(srcUrl =>
+      loadScript.mockImplementationOnce(() =>
         Promise.resolve({ isLoaded: false }));
       mapMethods.loadStateMapData(Highcharts, 'US', 'CA', (response) => {
         expect(Object.keys(Highcharts.maps).length).toEqual(0);
@@ -36,7 +36,7 @@ describe('loadStateMapData.js', () => {
     });
     it('Returns { error } when load returns error', () => {
       const error = new Error('test error');
-      loadScript.mockImplementationOnce(srcUrl => Promise.reject(error));
+      loadScript.mockImplementationOnce(() => Promise.reject(error));
       mapMethods.loadStateMapData(Highcharts, 'US', 'CA', (response) => {
         expect(Object.keys(Highcharts.maps).length).toEqual(0);
         expect(response.error).toEqual(error);
@@ -44,20 +44,23 @@ describe('loadStateMapData.js', () => {
     });
     it('Returns { isLoaded: true } when data already exists', () => {
       Highcharts.maps['countries/us/us-ca-all'] = {};
-      loadScript.mockImplementationOnce(srcUrl => Promise.resolve());
+      loadScript.mockImplementationOnce(() => Promise.resolve());
       mapMethods.loadStateMapData(Highcharts, 'US', 'CA', (response) => {
         expect(Object.keys(Highcharts.maps).length).toEqual(1);
         expect(response.isLoaded).toEqual(true);
       });
     });
     it('Returns { isLoaded: true } after data is ADDED to key IS found in maps array', () => {
-      loadScript.mockImplementationOnce(srcUrl => {
-        Highcharts.maps['countries/us/us-ca-all'] = {};
-        Promise.resolve({ isLoaded: false });
+      loadScript.mockImplementationOnce(() => {
+        const mapKey = 'countries/us/us-ca-all';
+        Highcharts.maps[mapKey] = {};
+        return Promise.resolve({ isLoaded: !!Highcharts.maps[mapKey] });
       });
       mapMethods.loadStateMapData(Highcharts, 'US', 'CA', (response) => {
-        expect(Object.keys(Highcharts.maps).length).toEqual(0);
-        expect(response.isLoaded).toEqual(false);
+        setTimeout(() => {
+          expect(Object.keys(Highcharts.maps).length).toEqual(1);
+          expect(response.isLoaded).toEqual(true);
+        });
       });
     });
   });

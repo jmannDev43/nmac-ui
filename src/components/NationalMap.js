@@ -4,9 +4,9 @@ import CircularProgress from 'material-ui/CircularProgress';
 import FlatButton from 'material-ui/FlatButton';
 import Dialog from 'material-ui/Dialog';
 import StateMap from './StateMap';
-import eventMethods from '../getEventData';
+import eventMethods from '../api/getEventData';
 import YearStepper from './YearStepper';
-import mapMethods from '../loadStateMapData';
+import mapMethods from '../api/loadStateMapData';
 
 const Highcharts = require('highcharts/highmaps');
 

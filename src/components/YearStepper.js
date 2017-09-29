@@ -6,6 +6,7 @@ import PlayArrow from 'material-ui/svg-icons/av/play-arrow';
 import Stop from 'material-ui/svg-icons/av/stop';
 import CircularProgress from 'material-ui/CircularProgress';
 import { withRouter } from 'react-router-dom';
+import isMaxYear from '../utils';
 
 const collisionYears = [
   1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,
@@ -35,11 +36,11 @@ class YearStepper extends Component {
     this.setState({ isPlaying: true });
     const currentYear = parseInt(this.props.match.params.year, 10);
     const timeInterval = this.props.match.url.indexOf('state') > -1 ? 2000 : 1000;
-    const maxYear = Math.max.apply(null, collisionYears);
-    let yearIndex = currentYear === maxYear ? 0 : collisionYears.indexOf(currentYear);
+    let yearIndex = isMaxYear(collisionYears, currentYear) ? 0 :
+      collisionYears.indexOf(currentYear);
     intervalId = setInterval(() => {
       const year = collisionYears[yearIndex];
-      if (year === maxYear) {
+      if (isMaxYear(collisionYears, year)) {
         this.stopTimeline();
       }
       yearIndex += 1;
@@ -53,6 +54,8 @@ class YearStepper extends Component {
   }
   render() {
     const activeYear = parseInt(this.props.activeYear, 10);
+    const loadingYear = isMaxYear(collisionYears, activeYear) ? collisionYears[0] :
+      (activeYear + 1);
     return (
       <div>
         <div className="yearStepperWrapper">
@@ -90,7 +93,7 @@ class YearStepper extends Component {
               <Stop />
             </FloatingActionButton>
             <CircularProgress size={30} />
-            <h3 className="stepperYear">Loading {activeYear === 2017 ? 1987 : (activeYear + 1) }...</h3>
+            <h3 className="stepperYear">Loading {loadingYear}...</h3>
           </div>
           :
           <div className="col col-sm-2">

@@ -3,10 +3,10 @@ import CircularProgress from 'material-ui/CircularProgress';
 import RaisedButton from 'material-ui/RaisedButton';
 import properCase from 'proper-case';
 import { withRouter } from 'react-router-dom';
-import eventMethods from '../getEventData';
+import eventMethods from '../api/getEventData';
 import YearStepper from './YearStepper';
 import DetailModal from './DetailModal';
-import mapMethods from '../loadStateMapData';
+import mapMethods from '../api/loadStateMapData';
 
 // Necessary for Highmaps to plot lat/long data...
 window.proj4 = require('../third-party/proj4');

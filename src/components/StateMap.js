@@ -142,7 +142,7 @@ class StateMap extends Component {
   render() {
     const activeYear = this.props.match.params.year;
     if (!this.state.eventData) {
-      return (<div style={{ height: (window.innerHeight - 30), textAlign: 'center' }}>
+      return (<div className="loaderWrapper" style={{ height: (window.innerHeight - 30), textAlign: 'center' }}>
         <CircularProgress size={300} style={{ marginTop: '18em' }} />
       </div>);
     }

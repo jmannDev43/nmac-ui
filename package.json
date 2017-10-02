@@ -36,6 +36,7 @@
   "eslintConfig": {
     "globals": {
       "window": true,
+      "document": true,
       "jest": true,
       "afterAll": true,
       "afterEach": true,

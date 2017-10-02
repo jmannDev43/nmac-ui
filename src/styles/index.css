@@ -32,9 +32,74 @@ html, body {
   height: 400px;
 }
 
-.yearStepperWrapper {
-  width: 100%;
-  overflowX: scroll;
-  height: 102px;
+.timeLineWrapper {
+  margin-top: 2em;
   border: 1px solid grey;
+  vertical-align: middle;
+  overflow-x: auto;
+}
+
+.timeLine {
+  width: 100%;
+  padding: 5em 0 3em 0;
+  height: 102px;
+  text-align: center;
+  vertical-align: middle;
+  display: table;
+}
+
+.timeLineDiv {
+  transform: rotate(90deg);
+  paddingLeft: 0;
+  paddingRight: 0;
+  margin: 10px auto auto 0;
+  display: table-cell;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.timeLineYear {
+  color: white;
+  line-height: 1.5em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.timeLineCircle {
+  border-radius: 50%;
+  background-color: #7f7f7f;
+  color: white;
+  height: 18px;
+  width: 18px;
+  margin-right: 5px;
+  display: inline-block;
+  position: absolute;
+  left: -25px;
+  top: 3px;
+  /*position: relative;*/
+  /*left: -29px;*/
+  /*top: 21px;*/
+  transform: rotate(-90deg);
+  font-size: 12px;
+}
+
+.timeLineDiv.active .timeLineCircle {
+  background-color: #ff424e;
+}
+
+.timeLineDiv.active .timeLineYear {
+  color: #ff424e;
+}
+
+.timeLineDiv:hover {
+  cursor: pointer;
+}
+
+.timeLineDiv:hover .timeLineCircle {
+  background-color: #ff424e;
+}
+
+.timeLineDiv:hover .timeLineYear {
+  color: #ff424e;
 }

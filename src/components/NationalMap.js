@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
-import CircularProgress from 'material-ui/CircularProgress';
-import FlatButton from 'material-ui/FlatButton';
+import { CircularProgress } from 'material-ui/Progress';
+import Button from 'material-ui/Button';
 import Dialog from 'material-ui/Dialog';
 import StateMap from './StateMap';
 import eventMethods from '../api/getEventData';
-import YearStepper from './YearStepper';
 import mapMethods from '../api/loadStateMapData';
+import TimeLine from './TimeLine';
 
 const Highcharts = require('highcharts/highmaps');
 
@@ -152,13 +152,13 @@ class NationalMap extends Component {
     const activeYear = this.props.match.params.year;
     if (!this.state.eventData) {
       return (<div style={{ height: (window.innerHeight - 30), textAlign: 'center' }}>
-        <CircularProgress size={300} thickness={7} style={{ marginTop: '18em' }} />
+        <CircularProgress size={300} style={{ marginTop: '18em' }} />
       </div>);
     }
     const actions = [
-      <FlatButton
+      <Button
+        color="primary"
         label="Close"
-        primary
         onClick={this.closeErrorModal.bind(this)}
       />,
     ];
@@ -166,9 +166,7 @@ class NationalMap extends Component {
       <div>
         <Route path={'events/:state/:year'} component={StateMap} />
         <div id="nationalMap" />
-        <YearStepper
-          activeYear={activeYear}
-        />
+        <TimeLine activeYear={activeYear} />
         <Dialog
           title="Unable to retrieve map data"
           actions={actions}

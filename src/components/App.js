@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import { grey200 as accent, red700 as primary, black } from 'material-ui/styles/colors';
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
+import { grey, red } from 'material-ui/colors';
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
-import MenuItem from 'material-ui/MenuItem';
+import { MenuItem } from 'material-ui/Menu';
 import Drawer from 'material-ui/Drawer';
 import AppBar from 'material-ui/AppBar';
 import NationalMap from './NationalMap';
 import StateMap from './StateMap';
 
-const muiTheme = getMuiTheme({
+const muiTheme = createMuiTheme({
   fontFamily: 'Roboto Slab, sans-serif',
   palette: {
-    textColor: black,
-    primary1Color: primary,
-    accent1Color: accent,
-    borderColor: accent,
-    shadowColor: primary,
+    textColor: grey[900],
+    primary1Color: red[700],
+    accent1Color: grey[200],
+    borderColor: grey[200],
+    shadowColor: red[700],
   },
 });
 
@@ -38,9 +37,9 @@ class App extends Component {
   }
   render() {
     return (
-      <MuiThemeProvider muiTheme={muiTheme}>
+      <MuiThemeProvider theme={muiTheme}>
         <div className="App">
-          <AppBar title={this.state.navTitle} onLeftIconButtonTouchTap={this.toggleDrawer.bind(this)} />
+          <AppBar title={this.state.navTitle} />
           <Drawer open={this.state.drawerOpen}>
             <MenuItem primaryText="Close" onClick={this.toggleDrawer.bind(this)} />
           </Drawer>

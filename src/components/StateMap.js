@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import CircularProgress from 'material-ui/CircularProgress';
-import RaisedButton from 'material-ui/RaisedButton';
+import { CircularProgress } from 'material-ui/Progress';
+import Button from 'material-ui/Button';
 import properCase from 'proper-case';
 import { withRouter } from 'react-router-dom';
 import eventMethods from '../api/getEventData';
-import YearStepper from './YearStepper';
+import TimeLine from './TimeLine';
 import DetailModal from './DetailModal';
 import mapMethods from '../api/loadStateMapData';
 
@@ -143,23 +143,22 @@ class StateMap extends Component {
     const activeYear = this.props.match.params.year;
     if (!this.state.eventData) {
       return (<div style={{ height: (window.innerHeight - 30), textAlign: 'center' }}>
-        <CircularProgress size={300} thickness={7} style={{ marginTop: '18em' }} />
+        <CircularProgress size={300} style={{ marginTop: '18em' }} />
       </div>);
     }
     const modalTitle = this.state.selectedCity ?
       `Near Mid Air Collisions in ${properCase(this.state.selectedCity)}, ${this.props.match.params.state} (${activeYear})` : '';
     return (
       <div>
-        <RaisedButton
-          label="Return to US"
+        <Button
+          raised
           onClick={this.loadNationalMap.bind(this)}
-          primary={false}
-          style={{ position: 'absolute', top: '105px', right: '9px' }}
-        />
+          style={{ position: 'absolute', top: '105px', right: '9px', zIndex: 999 }}
+        >
+          Return to US
+        </Button>
         <div id="stateMap" />
-        <YearStepper
-          activeYear={activeYear}
-        />
+        <TimeLine activeYear={activeYear} />
         <DetailModal
           title={modalTitle}
           handleClose={this.closeDetailModal.bind(this)}

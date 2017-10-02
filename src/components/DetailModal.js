@@ -1,6 +1,6 @@
 import React from 'react';
 import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
+import Button from 'material-ui/Button';
 import {
   Table,
   TableBody,
@@ -9,7 +9,7 @@ import {
   TableRow,
   TableRowColumn,
 } from 'material-ui/Table';
-import AirPlaneModeActive from 'material-ui/svg-icons/device/airplanemode-active';
+import AirPlaneModeActive from 'material-ui-icons/AirplanemodeActive';
 
 const DetailModal = (props) => {
   const customContentStyle = {
@@ -17,9 +17,9 @@ const DetailModal = (props) => {
     maxWidth: 'none',
   };
   const actions = [
-    <FlatButton
+    <Button
       label="Close"
-      primary
+      color="primary"
       onClick={props.handleClose}
     />,
   ];

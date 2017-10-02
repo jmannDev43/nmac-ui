@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74b0caa4-5282-45a8-a5b2-14ac0adb1f64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/__tests__/NationalMap.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/__tests__/TimeLine.test.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/__tests__/YearStepper.test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/__tests__/__snapshots__/YearStepper.test.js.snap" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/YearStepper.js" afterPath="$PROJECT_DIR$/src/components/TimeLine.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/__tests__/loadStateMapData.test.js" afterPath="$PROJECT_DIR$/src/api/__tests__/loadStateMapData.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/loadStateMapData.js" afterPath="$PROJECT_DIR$/src/api/loadStateMapData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/YearStepper.js" afterPath="$PROJECT_DIR$/src/components/YearStepper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/__tests__/YearStepper.test.js" afterPath="$PROJECT_DIR$/src/components/__tests__/YearStepper.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/__tests__/__snapshots__/YearStepper.test.js.snap" afterPath="$PROJECT_DIR$/src/components/__tests__/__snapshots__/YearStepper.test.js.snap" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/App.js" afterPath="$PROJECT_DIR$/src/components/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/DetailModal.js" afterPath="$PROJECT_DIR$/src/components/DetailModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/NationalMap.js" afterPath="$PROJECT_DIR$/src/components/NationalMap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/StateMap.js" afterPath="$PROJECT_DIR$/src/components/StateMap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/index.css" afterPath="$PROJECT_DIR$/src/styles/index.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,80 +38,28 @@
       <file leaf-file-name="loadStateMapData.test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/__tests__/loadStateMapData.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+            <state relative-caret-position="-438">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loadStateMapData.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/loadStateMapData.js">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+            <state relative-caret-position="-908">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getEventData.test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/__tests__/getEventData.test.js">
+      <file leaf-file-name="NationalMap.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/NationalMap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1176">
-              <caret line="49" column="45" lean-forward="false" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getEventData.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/getEventData.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="888">
-              <caret line="37" column="71" lean-forward="false" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitlab-ci.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="YearStepper.test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/__tests__/YearStepper.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/coverage/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="YearStepper.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/YearStepper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+            <state relative-caret-position="-183">
+              <caret line="88" column="6" lean-forward="false" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="6" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -113,14 +67,67 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NationalMap.test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/__tests__/NationalMap.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-82">
+              <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getEventData.test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/__tests__/getEventData.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateMap.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/StateMap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeLine.test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/__tests__/TimeLine.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+            <state relative-caret-position="266">
+              <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
               <folding>
-                <marker date="1506709719000" expanded="true" signature="436:553" ph="{&quot;start&quot;: &quot;react-scripts start&quot;...}" />
-                <marker date="1506709719000" expanded="true" signature="816:861" ph="{&quot;enzyme&quot;: &quot;^2.9.1&quot;...}" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,19 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>boxShadow</find>
-      <find>routes</find>
-      <find>:s</find>
-      <find>/events/</find>
-      <find>drilldown</find>
-      <find>getEventCountsByYearAndState</find>
-      <find>stateDrillDownCode</find>
-      <find>props.history</find>
-      <find>updateStep</find>
-      <find>Route</find>
-      <find>/events</find>
-      <find>getMapKey</find>
-      <find>isLoaded</find>
       <find>loadStateMapData</find>
       <find>load.</find>
       <find>4</find>
@@ -167,6 +161,19 @@
       <find>adapter</find>
       <find>.log</find>
       <find>console.log</find>
+      <find>material-ui/CircularProgress</find>
+      <find>import CircularProgress from 'material-ui/CircularProgress';</find>
+      <find>FlatB</find>
+      <find>Raised</find>
+      <find>thickness</find>
+      <find>env</find>
+      <find>,</find>
+      <find>'</find>
+      <find>overFlow</find>
+      <find>new Promise</find>
+      <find>classes</find>
+      <find>params</find>
+      <find>react-tap-event-plugin</find>
     </findStrings>
     <replaceStrings>
       <replace>updateCollisionData</replace>
@@ -180,6 +187,8 @@
       <replace>props</replace>
       <replace>eventMethods</replace>
       <replace>loadScript.</replace>
+      <replace>import { CircularProgress } from 'material-ui/Progress';</replace>
+      <replace>;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -196,7 +205,6 @@
         <option value="$PROJECT_DIR$/src/components/NmacMap.js" />
         <option value="$PROJECT_DIR$/src/Routes.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/drillDownMap.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.js" />
@@ -212,30 +220,34 @@
         <option value="$PROJECT_DIR$/src/components/__tests__/App.test.js" />
         <option value="$PROJECT_DIR$/src/third-party/us-ca-all.js" />
         <option value="$PROJECT_DIR$/src/getStateMapData.js" />
-        <option value="$PROJECT_DIR$/src/components/DetailModal.js" />
         <option value="$PROJECT_DIR$/src/third-party/us-all.js" />
         <option value="$PROJECT_DIR$/src/third-party/us-all-territories.js" />
         <option value="$PROJECT_DIR$/src/third-party/proj4.js" />
-        <option value="$PROJECT_DIR$/src/styles/index.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/__mocks__/load.js" />
         <option value="$PROJECT_DIR$/src/loadStateMapData.js" />
         <option value="$PROJECT_DIR$/src/__tests__/loadStateMapData.test.js" />
         <option value="$PROJECT_DIR$/coverage/src/loadStateMapData.js.html" />
-        <option value="$PROJECT_DIR$/src/components/App.js" />
-        <option value="$PROJECT_DIR$/src/components/NationalMap.js" />
         <option value="$PROJECT_DIR$/src/getEventData.js" />
         <option value="$PROJECT_DIR$/src/__tests__/getEventData.test.js" />
         <option value="$PROJECT_DIR$/coverage/index.html" />
-        <option value="$PROJECT_DIR$/src/components/StateMap.js" />
         <option value="$PROJECT_DIR$/src/utils.js" />
         <option value="$PROJECT_DIR$/src/__tests__/utils.test.js" />
-        <option value="$PROJECT_DIR$/src/components/__tests__/YearStepper.test.js" />
         <option value="$PROJECT_DIR$/src/api/loadStateMapData.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/.gitlab-ci.yml" />
         <option value="$PROJECT_DIR$/src/api/__tests__/loadStateMapData.test.js" />
+        <option value="$PROJECT_DIR$/src/components/DetailModal.js" />
+        <option value="$PROJECT_DIR$/src/components/App.js" />
         <option value="$PROJECT_DIR$/src/components/YearStepper.js" />
+        <option value="$PROJECT_DIR$/src/components/__tests__/YearStepper.test.js" />
+        <option value="$PROJECT_DIR$/src/components/StateMap.js" />
+        <option value="$PROJECT_DIR$/src/components/TimeLine.js" />
+        <option value="$PROJECT_DIR$/src/styles/index.css" />
+        <option value="$PROJECT_DIR$/src/components/__tests__/TimeLine.test.js" />
+        <option value="$PROJECT_DIR$/src/components/NationalMap.js" />
+        <option value="$PROJECT_DIR$/src/components/__tests__/NationalMap.test.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -312,7 +324,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -350,49 +361,7 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="nmacs-ui" type="cbb8eebc:String" user="nmacs-ui" />
-              <item name="build" type="cbb8eebc:String" user="build" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="nmacs-ui" type="cbb8eebc:String" user="nmacs-ui" />
-              <item name="build" type="cbb8eebc:String" user="build" />
-              <item name="static" type="cbb8eebc:String" user="static" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="nmacs-ui" type="cbb8eebc:String" user="nmacs-ui" />
-              <item name="build" type="cbb8eebc:String" user="build" />
-              <item name="static" type="cbb8eebc:String" user="static" />
-              <item name="js" type="cbb8eebc:String" user="js" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="nmacs-ui" type="cbb8eebc:String" user="nmacs-ui" />
-              <item name="coverage" type="cbb8eebc:String" user="coverage" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="nmacs-ui" type="cbb8eebc:String" user="nmacs-ui" />
               <item name="src" type="cbb8eebc:String" user="src" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="nmacs-ui" type="cbb8eebc:String" user="nmacs-ui" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-              <item name="__tests__" type="cbb8eebc:String" user="__tests__" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="nmacs-ui" type="cbb8eebc:String" user="nmacs-ui" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-              <item name="api" type="cbb8eebc:String" user="api" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="nmacs-ui" type="cbb8eebc:String" user="nmacs-ui" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-              <item name="api" type="cbb8eebc:String" user="api" />
-              <item name="__tests__" type="cbb8eebc:String" user="__tests__" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
@@ -406,19 +375,12 @@
               <item name="src" type="cbb8eebc:String" user="src" />
               <item name="components" type="cbb8eebc:String" user="components" />
               <item name="__tests__" type="cbb8eebc:String" user="__tests__" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="nmacs-ui" type="cbb8eebc:String" user="nmacs-ui" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-              <item name="components" type="cbb8eebc:String" user="components" />
-              <item name="__tests__" type="cbb8eebc:String" user="__tests__" />
-              <item name="__snapshots__" type="cbb8eebc:String" user="__snapshots__" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -426,7 +388,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="pack&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/package.json&#10;.g&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/.gitlab-ci.yml&#10;Yea&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/components/YearStepper.js&#10;load&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/api/loadStateMapData.js&#10;inde&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/index.js&#10;N&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/components/NationalMap.js&#10;De&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/components/DetailModal.js&#10;ge&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/getEventData.js&#10;National&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/components/NationalMap.js&#10;index&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/styles/index.css" />
+    <property name="SearchEverywhereHistoryKey" value="inde&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/styles/index.css&#10;Year&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/components/__tests__/YearStepper.test.js&#10;Det&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/components/DetailModal.js&#10;in&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/index.js&#10;pack&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/package.json&#10;.g&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/.gitlab-ci.yml&#10;Yea&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/components/YearStepper.js&#10;load&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/api/loadStateMapData.js&#10;N&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/components/NationalMap.js&#10;De&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/components/DetailModal.js&#10;ge&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/getEventData.js&#10;National&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/components/NationalMap.js&#10;index&#9;FILE&#9;file:///Users/joshuamann/Desktop/jmDev/nmacs/nmacs-ui/src/styles/index.css" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
@@ -464,13 +426,35 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.getEventData.js.getEvent methods.getEventCountsByYear">
+  <component name="RunManager" selected="Jest.&lt;NationalMap /&gt;.should work">
     <configuration name="Run Nmac Jest Tests" type="JavaScriptTestRunnerJest" factoryName="Jest">
       <node-interpreter value="project" />
       <working-dir value="$PROJECT_DIR$" />
       <jest-options value="--env=jsdom" />
       <envs />
       <scope-kind value="ALL" />
+    </configuration>
+    <configuration name="&lt;NationalMap /&gt;" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/components/__tests__/NationalMap.test.js" />
+      <test-names>
+        <test-name value="&lt;NationalMap /&gt;" />
+      </test-names>
+    </configuration>
+    <configuration name="&lt;NationalMap /&gt;.should work" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <working-dir value="$PROJECT_DIR$" />
+      <jest-options value="--env=jsdom" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/__tests__/NationalMap.test.js" />
+      <test-names>
+        <test-name value="&lt;NationalMap /&gt;" />
+        <test-name value="should work" />
+      </test-names>
     </configuration>
     <configuration name="&lt;YearStepper /&gt;" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
@@ -494,28 +478,6 @@
         <test-name value="getEventCountsByYear" />
       </test-names>
     </configuration>
-    <configuration name="loadStateMapData.js" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/__tests__/loadStateMapData.test.js" />
-      <test-names>
-        <test-name value="loadStateMapData.js" />
-      </test-names>
-    </configuration>
-    <configuration name="loadStateMapData.js.loadStateMapData().Returns { error } when load returns error" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/__tests__/loadStateMapData.test.js" />
-      <test-names>
-        <test-name value="loadStateMapData.js" />
-        <test-name value="loadStateMapData()" />
-        <test-name value="Returns { error } when load returns error" />
-      </test-names>
-    </configuration>
     <configuration name="loadStateMapData.js.loadStateMapData().Returns { isLoaded: true } after data is ADDED to key IS found in maps array" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <working-dir value="$PROJECT_DIR$" />
@@ -530,19 +492,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Jest.Run Nmac Jest Tests" />
-      <item index="1" class="java.lang.String" itemvalue="Jest.loadStateMapData.js.loadStateMapData().Returns { error } when load returns error" />
-      <item index="2" class="java.lang.String" itemvalue="Jest.loadStateMapData.js" />
-      <item index="3" class="java.lang.String" itemvalue="Jest.loadStateMapData.js.loadStateMapData().Returns { isLoaded: true } after data is ADDED to key IS found in maps array" />
-      <item index="4" class="java.lang.String" itemvalue="Jest.&lt;YearStepper /&gt;" />
-      <item index="5" class="java.lang.String" itemvalue="Jest.getEventData.js.getEvent methods.getEventCountsByYear" />
+      <item index="1" class="java.lang.String" itemvalue="Jest.loadStateMapData.js.loadStateMapData().Returns { isLoaded: true } after data is ADDED to key IS found in maps array" />
+      <item index="2" class="java.lang.String" itemvalue="Jest.&lt;YearStepper /&gt;" />
+      <item index="3" class="java.lang.String" itemvalue="Jest.getEventData.js.getEvent methods.getEventCountsByYear" />
+      <item index="4" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;.should work" />
+      <item index="5" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Jest.getEventData.js.getEvent methods.getEventCountsByYear" />
-        <item index="1" class="java.lang.String" itemvalue="Jest.&lt;YearStepper /&gt;" />
-        <item index="2" class="java.lang.String" itemvalue="Jest.loadStateMapData.js.loadStateMapData().Returns { isLoaded: true } after data is ADDED to key IS found in maps array" />
-        <item index="3" class="java.lang.String" itemvalue="Jest.loadStateMapData.js" />
-        <item index="4" class="java.lang.String" itemvalue="Jest.loadStateMapData.js.loadStateMapData().Returns { error } when load returns error" />
+        <item index="0" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;.should work" />
+        <item index="1" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;" />
+        <item index="2" class="java.lang.String" itemvalue="Jest.getEventData.js.getEvent methods.getEventCountsByYear" />
+        <item index="3" class="java.lang.String" itemvalue="Jest.&lt;YearStepper /&gt;" />
+        <item index="4" class="java.lang.String" itemvalue="Jest.loadStateMapData.js.loadStateMapData().Returns { isLoaded: true } after data is ADDED to key IS found in maps array" />
       </list>
     </recent_temporary>
   </component>
@@ -567,43 +529,44 @@
       <workItem from="1506282555252" duration="37349000" />
       <workItem from="1506639266501" duration="3039000" />
       <workItem from="1506714851923" duration="115000" />
+      <workItem from="1506816604270" duration="26938000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_YearStepper___ - 2017.09.28 at 22h 33m 37s.xml">
-      <configuration name="&lt;YearStepper /&gt;" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_NationalMap____should_work - 2017.10.01 at 19h 48m 29s.xml">
+      <configuration name="&lt;NationalMap /&gt;.should work" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="_YearStepper___ - 2017.09.29 at 11h 44m 45s.xml">
-      <configuration name="&lt;YearStepper /&gt;" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_NationalMap____should_work - 2017.10.01 at 19h 51m 15s.xml">
+      <configuration name="&lt;NationalMap /&gt;.should work" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="_YearStepper___ - 2017.09.29 at 13h 16m 15s.xml">
-      <configuration name="&lt;YearStepper /&gt;" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_NationalMap____should_work - 2017.10.01 at 19h 52m 02s.xml">
+      <configuration name="&lt;NationalMap /&gt;.should work" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="getEventData_js_getEvent_methods_getEventCountsByYear - 2017.09.29 at 12h 06m 39s.xml">
-      <configuration name="getEventData.js.getEvent methods.getEventCountsByYear" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_NationalMap____should_work - 2017.10.01 at 19h 57m 39s.xml">
+      <configuration name="&lt;NationalMap /&gt;.should work" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="loadStateMapData_js - 2017.09.24 at 17h 04m 02s.xml">
-      <configuration name="loadStateMapData.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_NationalMap____should_work - 2017.10.01 at 20h 00m 32s.xml">
+      <configuration name="&lt;NationalMap /&gt;.should work" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="loadStateMapData_js - 2017.09.24 at 17h 06m 09s.xml">
-      <configuration name="loadStateMapData.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_NationalMap____should_work - 2017.10.01 at 20h 00m 35s.xml">
+      <configuration name="&lt;NationalMap /&gt;.should work" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="loadStateMapData_js_loadStateMapData()_Returns_{_isLoaded__true_}_after_data_is_ADDED_to_key_IS_found_in_maps_array - 2017.09.29 at 09h 30m 23s.xml">
-      <configuration name="loadStateMapData.js.loadStateMapData().Returns { isLoaded: true } after data is ADDED to key IS found in maps array" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_NationalMap____should_work - 2017.10.01 at 20h 54m 08s.xml">
+      <configuration name="&lt;NationalMap /&gt;.should work" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="loadStateMapData_js_loadStateMapData()_Returns_{_isLoaded__true_}_after_data_is_ADDED_to_key_IS_found_in_maps_array - 2017.09.29 at 09h 31m 30s.xml">
-      <configuration name="loadStateMapData.js.loadStateMapData().Returns { isLoaded: true } after data is ADDED to key IS found in maps array" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_NationalMap____should_work - 2017.10.01 at 21h 01m 24s.xml">
+      <configuration name="&lt;NationalMap /&gt;.should work" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="loadStateMapData_js_loadStateMapData()_Returns_{_isLoaded__true_}_after_data_is_ADDED_to_key_IS_found_in_maps_array - 2017.09.29 at 09h 34m 20s.xml">
-      <configuration name="loadStateMapData.js.loadStateMapData().Returns { isLoaded: true } after data is ADDED to key IS found in maps array" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_NationalMap____should_work - 2017.10.01 at 21h 02m 04s.xml">
+      <configuration name="&lt;NationalMap /&gt;.should work" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="loadStateMapData_js_loadStateMapData()_Returns_{_isLoaded__true_}_after_data_is_ADDED_to_key_IS_found_in_maps_array - 2017.09.29 at 09h 35m 24s.xml">
-      <configuration name="loadStateMapData.js.loadStateMapData().Returns { isLoaded: true } after data is ADDED to key IS found in maps array" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_NationalMap____should_work - 2017.10.01 at 21h 05m 21s.xml">
+      <configuration name="&lt;NationalMap /&gt;.should work" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213886000" />
+    <option name="totallyTimeSpent" value="240824000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -621,11 +584,12 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21705426" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278481" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6276202" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5632184" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48335388" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20435308" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3020962" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39950678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -634,7 +598,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14940098" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6276202" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -656,27 +619,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="13" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/third-party/us-all-territories.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DetailModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css" />
-    <entry file="file://$PROJECT_DIR$/src/third-party/highmaps.js" />
     <entry file="file://$PROJECT_DIR$/src/styles/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -746,13 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DetailModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/third-party/us-ca-all.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -783,13 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -829,40 +762,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/__tests__/App.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NationalMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="6" column="47" lean-forward="false" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/StateMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -880,22 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/__tests__/getEventData.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="49" column="45" lean-forward="false" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/getEventData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="37" column="71" lean-forward="false" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -910,47 +797,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coverage/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/__tests__/YearStepper.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-          <folding>
-            <marker date="1506709719000" expanded="true" signature="436:553" ph="{&quot;start&quot;: &quot;react-scripts start&quot;...}" />
-            <marker date="1506709719000" expanded="true" signature="816:861" ph="{&quot;enzyme&quot;: &quot;^2.9.1&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/static/js/main.463a2ced.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="0" column="942759" lean-forward="false" selection-start-line="0" selection-start-column="942748" selection-end-line="0" selection-end-column="942759" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -963,21 +813,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/__tests__/loadStateMapData.test.js">
+    <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        <state relative-caret-position="192">
+          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DetailModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="68" lean-forward="false" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coverage/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/YearStepper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        <state relative-caret-position="234">
+          <caret line="88" column="94" lean-forward="false" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TimeLine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/__tests__/YearStepper.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/getEventData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/__tests__/getEventData.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/__tests__/loadStateMapData.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-438">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-908">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/StateMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NationalMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-183">
+          <caret line="88" column="6" lean-forward="false" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/__tests__/TimeLine.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/__tests__/NationalMap.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-82">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="34" column="60" lean-forward="true" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

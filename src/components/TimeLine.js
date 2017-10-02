@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Step, StepLabel, Stepper, StepButton } from 'material-ui/Stepper';
-import FloatingActionButton from 'material-ui/FloatingActionButton';
-import PlayArrow from 'material-ui/svg-icons/av/play-arrow';
-import Stop from 'material-ui/svg-icons/av/stop';
-import CircularProgress from 'material-ui/CircularProgress';
+import Button from 'material-ui/Button';
+import PlayArrow from 'material-ui-icons/PlayArrow';
+import Stop from 'material-ui-icons/Stop';
+import { CircularProgress } from 'material-ui/Progress';
+import red from 'material-ui/colors';
 import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import isMaxYear from '../utils';
 
 const collisionYears = [
@@ -15,13 +15,18 @@ const collisionYears = [
 ];
 let intervalId;
 
-class YearStepper extends Component {
+function getActiveYearClass(year, activeYear) {
+  return year === activeYear ? 'active' : '';
+}
+
+class TimeLine extends Component {
   constructor() {
     super();
     this.state = {
       isPlaying: false,
     };
   }
+
   updateStep(year) {
     let url = this.props.match.path.replace(':year', year);
     if (url.indexOf(':state') > -1) {
@@ -31,9 +36,10 @@ class YearStepper extends Component {
     }
     this.props.history.push(url);
   }
+
   playTimeline() {
     console.log('Starting Player');
-    this.setState({ isPlaying: true });
+    this.setState({isPlaying: true});
     const currentYear = parseInt(this.props.match.params.year, 10);
     const timeInterval = this.props.match.url.indexOf('state') > -1 ? 2000 : 1000;
     let yearIndex = isMaxYear(collisionYears, currentYear) ? 0 :
@@ -47,64 +53,67 @@ class YearStepper extends Component {
       this.updateStep(year);
     }, timeInterval);
   }
+
   stopTimeline() {
     clearInterval(intervalId);
     console.log('Stopping Player');
-    this.setState({ isPlaying: false });
+    this.setState({isPlaying: false});
   }
+
   render() {
     const activeYear = parseInt(this.props.activeYear, 10);
     const loadingYear = isMaxYear(collisionYears, activeYear) ? collisionYears[0] :
       (activeYear + 1);
     return (
       <div>
-        <div className="yearStepperWrapper">
-          <Stepper
-            linear={false}
-            activeStep={collisionYears.indexOf(activeYear)}
-            connector={null}
-          >
-            {
-              collisionYears.map((year, i) => (<Step key={`step_${year}`}>
-                <StepButton key={`stepButton_${year}`} onClick={() => this.updateStep(year)}>
-                  <StepLabel
-                    style={{
-                      transform: 'rotate(90deg)',
-                      paddingLeft: 0,
-                      paddingRight: 0,
-                      width: '30px',
-                      color: 'white',
-                    }}
-                    key={`stepLabel_${year}`}
-                  >{year}</StepLabel>
-                </StepButton>
-              </Step>))
-            }
-          </Stepper>
+      <div className="timeLineWrapper">
+        <div className="timeLine">
+          {collisionYears.map((year, i) => {
+            return <div
+              key={year}
+              className={`timeLineDiv ${getActiveYearClass(year, activeYear)}`}
+              onClick={() => this.updateStep(year)}
+            >
+              <div className="timeLineCircle">{i + 1}</div>
+              <span className="timeLineYear">{year}</span>
+            </div>;
+          })}
         </div>
+      </div>
         {this.state.isPlaying ?
           <div className="col col-sm-2">
-            <FloatingActionButton
-              style={{ margin: '1em 2em 0 1em' }}
-              secondary={false}
-              mini
+            <Button
+              fab
+              style={{
+                margin: '1em 2em 0 1em',
+                backgroundColor: red[700],
+                color: 'white',
+                width: '43px',
+                height: '43px',
+              }}
               onClick={this.stopTimeline.bind(this)}
             >
-              <Stop />
-            </FloatingActionButton>
-            <CircularProgress size={30} />
+              <Stop/>
+            </Button>
+            <CircularProgress size={30}/>
             <h3 className="stepperYear">Loading {loadingYear}...</h3>
           </div>
           :
           <div className="col col-sm-2">
-            <FloatingActionButton
-              style={{ margin: '1em 2em 0 1em', boxShadow: 'rgba(90, 211, 47, 0.16) 0px 3px 10px, rgba(90, 211, 47, 0.23) 0px 3px 10px' }}
-              backgroundColor="#00E676"
-              mini
+            <Button
+              fab
+              style={{
+                margin: '1em 2em 0 1em',
+                boxShadow: 'rgba(90, 211, 47, 0.16) 0px 3px 10px, rgba(90, 211, 47, 0.23) 0px 3px 10px',
+                backgroundColor: '#00E676',
+                color: 'white',
+                width: '43px',
+                height: '43px',
+              }}
               onClick={this.playTimeline.bind(this)}
             >
-              <PlayArrow />
-            </FloatingActionButton>
+              <PlayArrow/>
+            </Button>
           </div>
         }
       </div>
@@ -112,7 +121,7 @@ class YearStepper extends Component {
   }
 }
 
-YearStepper.propTypes = {
+TimeLine.propTypes = {
   history: PropTypes.object,
   activeYear: PropTypes.string,
   match: PropTypes.shape({
@@ -126,4 +135,4 @@ YearStepper.propTypes = {
   }),
 };
 
-export default withRouter(YearStepper);
+export default withRouter(TimeLine);

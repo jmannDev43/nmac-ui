@@ -12,10 +12,7 @@ build:
   artifacts:
     expire_in: 3 months
     paths:
-      - build
-
-#before_script:
-#  - export CI=true
+      - ./build
 
 test:
   image: node:alpine
@@ -25,3 +22,20 @@ test:
   script:
     - npm install --progress=false
     - npm test
+
+deploy:
+  image: node:alpine
+  stage: deploy
+  before_script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - 'which rsync || ( apt-get install -y rsync )'
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  script:
+    - rsync -av ./build/ "$DEST_PATH"
+  after_script:
+    - ssh $SSH_ROOT "serve -s build"
+  only:
+    - master

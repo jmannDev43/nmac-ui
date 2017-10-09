@@ -1,7 +1,16 @@
 stages:
-  - build
   - test
+  - build
   - deploy
+
+test:
+  image: node:alpine
+  stage: test
+  variables:
+    CI: "true"
+  script:
+    - npm install --progress=false
+    - npm test
 
 build:
   image: node:alpine
@@ -13,15 +22,6 @@ build:
     expire_in: 3 months
     paths:
       - ./build
-
-test:
-  image: node:alpine
-  stage: test
-  variables:
-    CI: "true"
-  script:
-    - npm install --progress=false
-    - npm test
 
 deploy:
   image: node:latest
@@ -36,6 +36,7 @@ deploy:
   script:
     - rsync -av ./build/ "$DEST_PATH"
   after_script:
+    - npm install -g serve
     - ssh $SSH_ROOT "serve -s build"
   only:
     - master

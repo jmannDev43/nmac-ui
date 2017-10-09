@@ -5,7 +5,7 @@ function getHascCode(state, country) {
 }
 
 async function getEventData(addToUrl) {
-  const response = await fetch(`http://localhost:5000/${addToUrl}`);
+  const response = await fetch(`http://${window.location.hostname}:5000/${addToUrl}`);
   const data = await response.json();
   return data;
 }

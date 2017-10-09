@@ -103,7 +103,7 @@ class TimeLine extends Component {
             <Button
               fab
               style={{
-                margin: '1em 2em 0 1em',
+                margin: '1em 2em 1em 1em',
                 boxShadow: 'rgba(90, 211, 47, 0.16) 0px 3px 10px, rgba(90, 211, 47, 0.23) 0px 3px 10px',
                 backgroundColor: '#00E676',
                 color: 'white',

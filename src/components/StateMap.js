@@ -148,12 +148,28 @@ class StateMap extends Component {
     }
     const modalTitle = this.state.selectedCity ?
       `Near Mid Air Collisions in ${properCase(this.state.selectedCity)}, ${this.props.match.params.state} (${activeYear})` : '';
+    const windowSize = window.innerWidth < 500 ? 'small' : 'large';
+    const buttonStyle = {
+      small: {
+        top: 0,
+        left: 0,
+        position: 'relative',
+        width: '100%',
+        zIndex: 999,
+      },
+      large: {
+        position: 'absolute',
+        top: '105px',
+        right: '9px',
+        zIndex: '999',
+      },
+    };
     return (
       <div>
         <Button
           raised
           onClick={this.loadNationalMap.bind(this)}
-          style={{ position: 'absolute', top: '105px', right: '9px', zIndex: 999 }}
+          style={buttonStyle[windowSize]}
         >
           Return to US
         </Button>

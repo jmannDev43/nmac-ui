@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Button from 'material-ui/Button';
 import PlayArrow from 'material-ui-icons/PlayArrow';
 import Stop from 'material-ui-icons/Stop';
 import { CircularProgress } from 'material-ui/Progress';
-import red from 'material-ui/colors';
+import { red } from 'material-ui/colors';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import isMaxYear from '../utils';
@@ -66,20 +66,20 @@ class TimeLine extends Component {
       (activeYear + 1);
     return (
       <div>
-      <div className="timeLineWrapper">
-        <div className="timeLine">
-          {collisionYears.map((year, i) => {
-            return <div
-              key={year}
-              className={`timeLineDiv ${getActiveYearClass(year, activeYear)}`}
-              onClick={() => this.updateStep(year)}
-            >
-              <div className="timeLineCircle">{i + 1}</div>
-              <span className="timeLineYear">{year}</span>
-            </div>;
-          })}
+        <div className="timeLineWrapper">
+          <div className="timeLine">
+            {collisionYears.map((year, i) => {
+              return <div
+                key={year}
+                className={`timeLineDiv ${getActiveYearClass(year, activeYear)}`}
+                onClick={() => this.updateStep(year)}
+              >
+                <div className="timeLineCircle">{i + 1}</div>
+                <span className="timeLineYear">{year}</span>
+              </div>;
+            })}
+          </div>
         </div>
-      </div>
         {this.state.isPlaying ?
           <div className="col col-sm-2">
             <Button

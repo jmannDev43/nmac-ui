@@ -35,7 +35,7 @@ deploy:
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
   script:
     - rsync -av ./build/ "$SSH_ROOT:$DEST_PATH/build"
-    - npm install -g serve
-    - ssh $SSH_ROOT "serve -s $DEST_PATH/build"
+#    - npm install -g serve
+#    - ssh $SSH_ROOT "serve -s $DEST_PATH/build"
   only:
     - master

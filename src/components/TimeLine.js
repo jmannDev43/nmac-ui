@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Button from 'material-ui/Button';
 import PlayArrow from 'material-ui-icons/PlayArrow';
 import Stop from 'material-ui-icons/Stop';
@@ -39,7 +39,7 @@ class TimeLine extends Component {
 
   playTimeline() {
     console.log('Starting Player');
-    this.setState({isPlaying: true});
+    this.setState({ isPlaying: true });
     const currentYear = parseInt(this.props.match.params.year, 10);
     const timeInterval = this.props.match.url.indexOf('state') > -1 ? 2000 : 1000;
     let yearIndex = isMaxYear(collisionYears, currentYear) ? 0 :
@@ -57,7 +57,7 @@ class TimeLine extends Component {
   stopTimeline() {
     clearInterval(intervalId);
     console.log('Stopping Player');
-    this.setState({isPlaying: false});
+    this.setState({ isPlaying: false });
   }
 
   render() {
@@ -68,16 +68,14 @@ class TimeLine extends Component {
       <div>
         <div className="timeLineWrapper">
           <div className="timeLine">
-            {collisionYears.map((year, i) => {
-              return <div
-                key={year}
-                className={`timeLineDiv ${getActiveYearClass(year, activeYear)}`}
-                onClick={() => this.updateStep(year)}
-              >
-                <div className="timeLineCircle">{i + 1}</div>
-                <span className="timeLineYear">{year}</span>
-              </div>;
-            })}
+            {collisionYears.map((year, i) => (<div
+              key={year}
+              className={`timeLineDiv ${getActiveYearClass(year, activeYear)}`}
+              onClick={() => this.updateStep(year)}
+            >
+              <div className="timeLineCircle">{i + 1}</div>
+              <span className="timeLineYear">{year}</span>
+            </div>))}
           </div>
         </div>
         {this.state.isPlaying ?
@@ -93,9 +91,9 @@ class TimeLine extends Component {
               }}
               onClick={this.stopTimeline.bind(this)}
             >
-              <Stop/>
+              <Stop />
             </Button>
-            <CircularProgress size={30}/>
+            <CircularProgress size={30} />
             <h3 className="stepperYear">Loading {loadingYear}...</h3>
           </div>
           :
@@ -112,7 +110,7 @@ class TimeLine extends Component {
               }}
               onClick={this.playTimeline.bind(this)}
             >
-              <PlayArrow/>
+              <PlayArrow />
             </Button>
           </div>
         }

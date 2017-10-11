@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74b0caa4-5282-45a8-a5b2-14ac0adb1f64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/DetailTable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/DetailModal.js" afterPath="$PROJECT_DIR$/src/components/DetailModal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/StateMap.js" afterPath="$PROJECT_DIR$/src/components/StateMap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/TimeLine.js" afterPath="$PROJECT_DIR$/src/components/TimeLine.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/index.css" afterPath="$PROJECT_DIR$/src/styles/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/__tests__/TimeLine.test.js" afterPath="$PROJECT_DIR$/src/components/__tests__/TimeLine.test.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,23 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NationalMap.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/NationalMap.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DetailModal.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/DetailModal.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+              <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -55,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/DetailTable.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
-              <caret line="8" column="56" lean-forward="true" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+              <caret line="8" column="56" lean-forward="false" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -64,8 +48,8 @@
       <file leaf-file-name="StateMap.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/StateMap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="190" column="52" lean-forward="true" selection-start-line="190" selection-start-column="52" selection-end-line="190" selection-end-column="52" />
+            <state relative-caret-position="590">
+              <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -73,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="104" column="1" lean-forward="false" selection-start-line="104" selection-start-column="1" selection-end-line="104" selection-end-column="1" />
+            <state relative-caret-position="201">
+              <caret line="92" column="1" lean-forward="false" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -86,21 +70,11 @@
       <file leaf-file-name="NationalMap.test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/__tests__/NationalMap.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+            <state relative-caret-position="-683">
+              <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitlab-ci.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -109,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/src/api/getEventData.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+              <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -118,21 +92,45 @@
       <file leaf-file-name="TimeLine.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/TimeLine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="105" column="36" lean-forward="false" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
+            <state relative-caret-position="274">
+              <caret line="72" column="79" lean-forward="false" selection-start-line="72" selection-start-column="79" selection-end-line="72" selection-end-column="79" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="TimeLine.test.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/__tests__/TimeLine.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+            <state relative-caret-position="102">
+              <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeLine.test.js.snap" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/__tests__/__snapshots__/TimeLine.test.js.snap">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/__tests__/App.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,7 +146,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>request-promise-native</find>
       <find>topojson</find>
       <find>istan</find>
       <find>this.props.url</find>
@@ -176,8 +173,9 @@
       <find>material-ui-v0</find>
       <find>red</find>
       <find>from 'material-ui/colors'</find>
-      <find>getEventCountsByYear</find>
       <find>'</find>
+      <find>toMatchsnapShot</find>
+      <find>getEventCountsByYear</find>
     </findStrings>
     <replaceStrings>
       <replace>updateCollisionData</replace>
@@ -239,7 +237,6 @@
         <option value="$PROJECT_DIR$/src/components/App.js" />
         <option value="$PROJECT_DIR$/src/components/YearStepper.js" />
         <option value="$PROJECT_DIR$/src/components/__tests__/YearStepper.test.js" />
-        <option value="$PROJECT_DIR$/src/components/__tests__/TimeLine.test.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/NationalMap.js" />
         <option value="$PROJECT_DIR$/src/components/__tests__/NationalMap.test.js" />
@@ -250,8 +247,9 @@
         <option value="$PROJECT_DIR$/src/components/DetailModal.js" />
         <option value="$PROJECT_DIR$/src/components/DetailTable.js" />
         <option value="$PROJECT_DIR$/src/components/StateMap.js" />
-        <option value="$PROJECT_DIR$/src/components/TimeLine.js" />
         <option value="$PROJECT_DIR$/src/styles/index.css" />
+        <option value="$PROJECT_DIR$/src/components/TimeLine.js" />
+        <option value="$PROJECT_DIR$/src/components/__tests__/TimeLine.test.js" />
       </list>
     </option>
   </component>
@@ -273,7 +271,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -395,6 +393,14 @@
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="nmacs-ui" type="cbb8eebc:String" user="nmacs-ui" />
               <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="components" type="cbb8eebc:String" user="components" />
+              <item name="__tests__" type="cbb8eebc:String" user="__tests__" />
+              <item name="__snapshots__" type="cbb8eebc:String" user="__snapshots__" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="nmacs-ui" type="cbb8eebc:String" user="nmacs-ui" />
+              <item name="src" type="cbb8eebc:String" user="src" />
               <item name="styles" type="cbb8eebc:String" user="styles" />
             </path>
           </expand>
@@ -447,7 +453,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.&lt;NationalMap /&gt;.renders loader when there is no eventData">
+  <component name="RunManager" selected="Jest.&lt;TimeLine /&gt;.renders with activeYear passed to it">
     <configuration name="Run Nmac Jest Tests" type="JavaScriptTestRunnerJest" factoryName="Jest">
       <node-interpreter value="project" />
       <working-dir value="$PROJECT_DIR$" />
@@ -490,31 +496,44 @@
         <test-name value="should work" />
       </test-names>
     </configuration>
-    <configuration name="getEventData.js.getEvent methods.getEventCountsByYear" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+    <configuration name="&lt;TimeLine /&gt;" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <working-dir value="$PROJECT_DIR$" />
+      <jest-options value="--env=jsdom" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/api/__tests__/getEventData.test.js" />
+      <test-file value="$PROJECT_DIR$/src/components/__tests__/TimeLine.test.js" />
       <test-names>
-        <test-name value="getEventData.js" />
-        <test-name value="getEvent methods" />
-        <test-name value="getEventCountsByYear" />
+        <test-name value="&lt;TimeLine /&gt;" />
       </test-names>
     </configuration>
-    <list size="5">
+    <configuration name="&lt;TimeLine /&gt;.renders with activeYear passed to it" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <working-dir value="$PROJECT_DIR$" />
+      <jest-options value="--env=jsdom" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/__tests__/TimeLine.test.js" />
+      <test-names>
+        <test-name value="&lt;TimeLine /&gt;" />
+        <test-name value="renders with activeYear passed to it" />
+      </test-names>
+    </configuration>
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Jest.Run Nmac Jest Tests" />
-      <item index="1" class="java.lang.String" itemvalue="Jest.getEventData.js.getEvent methods.getEventCountsByYear" />
-      <item index="2" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;.should work" />
-      <item index="3" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;" />
-      <item index="4" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;.renders loader when there is no eventData" />
+      <item index="1" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;.should work" />
+      <item index="2" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;" />
+      <item index="3" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;.renders loader when there is no eventData" />
+      <item index="4" class="java.lang.String" itemvalue="Jest.&lt;TimeLine /&gt;.renders with activeYear passed to it" />
+      <item index="5" class="java.lang.String" itemvalue="Jest.&lt;TimeLine /&gt;" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;.renders loader when there is no eventData" />
-        <item index="1" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;.should work" />
-        <item index="2" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;" />
-        <item index="3" class="java.lang.String" itemvalue="Jest.getEventData.js.getEvent methods.getEventCountsByYear" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Jest.&lt;TimeLine /&gt;.renders with activeYear passed to it" />
+        <item index="1" class="java.lang.String" itemvalue="Jest.&lt;TimeLine /&gt;" />
+        <item index="2" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;.renders loader when there is no eventData" />
+        <item index="3" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;.should work" />
+        <item index="4" class="java.lang.String" itemvalue="Jest.&lt;NationalMap /&gt;" />
       </list>
     </recent_temporary>
   </component>
@@ -539,44 +558,44 @@
       <workItem from="1506282555252" duration="37349000" />
       <workItem from="1506639266501" duration="3039000" />
       <workItem from="1506714851923" duration="115000" />
-      <workItem from="1506816604270" duration="54021000" />
+      <workItem from="1506816604270" duration="57773000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_NationalMap____renders_loader_when_there_is_no_eventData - 2017.10.02 at 10h 04m 13s.xml">
-      <configuration name="&lt;NationalMap /&gt;.renders loader when there is no eventData" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_TimeLine___ - 2017.10.10 at 14h 58m 01s.xml">
+      <configuration name="&lt;TimeLine /&gt;" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="_NationalMap____renders_loader_when_there_is_no_eventData - 2017.10.02 at 10h 05m 55s.xml">
-      <configuration name="&lt;NationalMap /&gt;.renders loader when there is no eventData" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_TimeLine___ - 2017.10.10 at 15h 13m 43s.xml">
+      <configuration name="&lt;TimeLine /&gt;" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="_NationalMap____renders_loader_when_there_is_no_eventData - 2017.10.02 at 10h 07m 18s.xml">
-      <configuration name="&lt;NationalMap /&gt;.renders loader when there is no eventData" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_TimeLine____renders_with_activeYear_passed_to_it - 2017.10.10 at 14h 57m 50s.xml">
+      <configuration name="&lt;TimeLine /&gt;.renders with activeYear passed to it" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="_NationalMap____renders_loader_when_there_is_no_eventData - 2017.10.02 at 10h 10m 05s.xml">
-      <configuration name="&lt;NationalMap /&gt;.renders loader when there is no eventData" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_TimeLine____renders_with_activeYear_passed_to_it - 2017.10.10 at 15h 02m 24s.xml">
+      <configuration name="&lt;TimeLine /&gt;.renders with activeYear passed to it" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="_NationalMap____renders_loader_when_there_is_no_eventData - 2017.10.02 at 10h 10m 40s.xml">
-      <configuration name="&lt;NationalMap /&gt;.renders loader when there is no eventData" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_TimeLine____renders_with_activeYear_passed_to_it - 2017.10.10 at 15h 08m 15s.xml">
+      <configuration name="&lt;TimeLine /&gt;.renders with activeYear passed to it" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="_NationalMap____renders_loader_when_there_is_no_eventData - 2017.10.02 at 10h 10m 43s.xml">
-      <configuration name="&lt;NationalMap /&gt;.renders loader when there is no eventData" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_TimeLine____renders_with_activeYear_passed_to_it - 2017.10.10 at 15h 10m 43s.xml">
+      <configuration name="&lt;TimeLine /&gt;.renders with activeYear passed to it" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="_NationalMap____renders_loader_when_there_is_no_eventData - 2017.10.02 at 10h 22m 59s.xml">
-      <configuration name="&lt;NationalMap /&gt;.renders loader when there is no eventData" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_TimeLine____renders_with_activeYear_passed_to_it - 2017.10.10 at 15h 17m 27s.xml">
+      <configuration name="&lt;TimeLine /&gt;.renders with activeYear passed to it" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="_NationalMap____renders_loader_when_there_is_no_eventData - 2017.10.02 at 10h 24m 33s.xml">
-      <configuration name="&lt;NationalMap /&gt;.renders loader when there is no eventData" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_TimeLine____renders_with_activeYear_passed_to_it - 2017.10.10 at 15h 18m 28s.xml">
+      <configuration name="&lt;TimeLine /&gt;.renders with activeYear passed to it" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="_NationalMap____should_work - 2017.10.01 at 21h 02m 04s.xml">
-      <configuration name="&lt;NationalMap /&gt;.should work" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_TimeLine____renders_with_activeYear_passed_to_it - 2017.10.10 at 15h 26m 37s.xml">
+      <configuration name="&lt;TimeLine /&gt;.renders with activeYear passed to it" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="_NationalMap____should_work - 2017.10.01 at 21h 05m 21s.xml">
-      <configuration name="&lt;NationalMap /&gt;.should work" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="_TimeLine____renders_with_activeYear_passed_to_it - 2017.10.10 at 15h 30m 01s.xml">
+      <configuration name="&lt;TimeLine /&gt;.renders with activeYear passed to it" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267907000" />
+    <option name="totallyTimeSpent" value="271659000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -588,7 +607,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21705426" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -599,9 +618,9 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48335388" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32799014" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.297164" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0049321824" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49815044" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -629,12 +648,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="30" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.html" />
     <entry file="file://$PROJECT_DIR$/src/logo.svg" />
     <entry file="file://$PROJECT_DIR$/src/components/YearStepper2.js" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
@@ -758,13 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/__tests__/App.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -867,14 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/__tests__/TimeLine.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/testUtils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -907,18 +910,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/getEventData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/NationalMap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+          <caret line="10" column="50" lean-forward="false" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -928,17 +923,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/DetailModal.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/__tests__/NationalMap.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+          <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -948,36 +933,82 @@
     <entry file="file://$PROJECT_DIR$/src/components/DetailTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="8" column="56" lean-forward="true" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+          <caret line="8" column="56" lean-forward="false" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/StateMap.js">
+    <entry file="file://$PROJECT_DIR$/src/components/__tests__/App.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="190" column="52" lean-forward="true" selection-start-line="190" selection-start-column="52" selection-end-line="190" selection-end-column="52" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimeLine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="105" column="36" lean-forward="false" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="104" column="1" lean-forward="false" selection-start-line="104" selection-start-column="1" selection-end-line="104" selection-end-column="1" />
+        <state relative-caret-position="201">
+          <caret line="92" column="1" lean-forward="false" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/__tests__/NationalMap.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-683">
+          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/StateMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/getEventData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TimeLine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="72" column="79" lean-forward="false" selection-start-line="72" selection-start-column="79" selection-end-line="72" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/__tests__/__snapshots__/TimeLine.test.js.snap">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/__tests__/TimeLine.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
